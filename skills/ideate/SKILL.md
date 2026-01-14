@@ -26,6 +26,7 @@ What would you like to do?
 3. **Execute plan** - Implement a plan with checkpoints
 4. **Review existing plan** - Have experts review a completed plan
 5. **Quick validation** - Sanity-check an approach before diving in
+6. **Document solution** - Capture a solved problem for future reference
 
 **Wait for response before proceeding.**
 </intake>
@@ -38,6 +39,7 @@ What would you like to do?
 | 3, "execute", "implement", "build" | `workflows/execute.md` |
 | 4, "review", "existing", "plan" | `workflows/expert-review.md` |
 | 5, "quick", "sanity", "validate", "check" | `workflows/quick-validation.md` |
+| 6, "document", "compound", "solved", "fixed" | `workflows/compound.md` |
 
 **Intent-based routing (if user provides clear intent without selecting menu):**
 - User describes a feature/idea → `workflows/full-design.md`
@@ -45,6 +47,7 @@ What would you like to do?
 - User has implementation plan, wants to execute → `workflows/execute.md`
 - User shares a plan file for review → `workflows/expert-review.md`
 - User asks "is this approach okay?" → `workflows/quick-validation.md`
+- User says "that worked", "it's fixed", "problem solved" → `workflows/compound.md`
 
 **After reading the workflow, follow it exactly.**
 </routing>
@@ -52,14 +55,18 @@ What would you like to do?
 <reviewer_selection>
 Select reviewers based on detected project type:
 
-**Rails projects:**
-- @agent-dhh-rails-reviewer
-- @agent-kieran-rails-reviewer
+**Daniel's projects (detected by `@materia/` imports or `.ruler/` directory):**
+- @agent-daniel-reviewer (uses `agents/daniel-reviewer.md`)
 - @agent-code-simplicity-reviewer
 
 **TypeScript/React projects:**
+- @agent-daniel-reviewer (if Daniel's project, else kieran)
 - @agent-kieran-typescript-reviewer
 - @agent-architecture-strategist
+
+**Rails projects:**
+- @agent-dhh-rails-reviewer
+- @agent-kieran-rails-reviewer
 - @agent-code-simplicity-reviewer
 
 **Python projects:**
@@ -72,7 +79,7 @@ Select reviewers based on detected project type:
 - @agent-pattern-recognition-specialist
 - @agent-code-simplicity-reviewer
 
-Detect project type by checking for: `Gemfile` (Rails), `package.json` with React/TypeScript (TS), `pyproject.toml`/`requirements.txt` (Python).
+Detect project type by checking for: `.ruler/` or `@materia/` (Daniel's), `Gemfile` (Rails), `package.json` with React/TypeScript (TS), `pyproject.toml`/`requirements.txt` (Python).
 </reviewer_selection>
 
 <reference_index>
@@ -87,6 +94,9 @@ All domain knowledge in `references/`:
 **Implementation:**
 - [testing-patterns.md](references/testing-patterns.md) - Vitest, Playwright, TDD cycle
 - [task-granularity.md](references/task-granularity.md) - Bite-sized tasks, commit patterns
+
+**Knowledge capture:**
+- [solution-schema.md](references/solution-schema.md) - YAML frontmatter, problem types, severity levels
 </reference_index>
 
 <workflows_index>
@@ -97,4 +107,18 @@ All domain knowledge in `references/`:
 | execute.md | Implementation with checkpoints + TS/lint |
 | expert-review.md | Parallel expert review of existing plan |
 | quick-validation.md | Fast sanity check on approach |
+| compound.md | Capture solved problems as searchable docs |
 </workflows_index>
+
+<knowledge_loop>
+**The full cycle:**
+
+```
+ideate (design) → implement → encounter problem → solve → compound (document)
+       ↑                                                        |
+       └────────────────────────────────────────────────────────┘
+                    informs future design sessions
+```
+
+When starting ideate, episodic-memory searches `docs/solutions/` to surface past learnings.
+</knowledge_loop>
