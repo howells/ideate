@@ -1,12 +1,12 @@
 {
-  "name": "ideate",
+  "name": "arc",
   "version": "1.0.0",
-  "description": "Turn ideas into validated designs through collaborative dialogue, then implement with TDD. Combines brainstorming, expert review, frontend-design, and execution into one unified workflow.",
+  "description": "The full arc from idea to shipped code. Combines design, planning, TDD execution, expert review, and knowledge capture into one unified development workflow.",
   "author": {
     "name": "Daniel Howells",
     "url": "https://github.com/danielhowells"
   },
-  "repository": "https://github.com/danielhowells/ideate",
+  "repository": "https://github.com/howells/arc",
   "license": "MIT",
   "keywords": [
     "design",
@@ -16,6 +16,8 @@
     "review",
     "brainstorming",
     "frontend",
-    "workflow"
+    "workflow",
+    "development",
+    "lifecycle"
   ]
 }

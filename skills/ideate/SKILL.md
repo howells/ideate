@@ -53,31 +53,36 @@ What would you like to do?
 </routing>
 
 <reviewer_selection>
-Select reviewers based on detected project type:
+Select reviewers based on detected project type. Use local agent definitions in `agents/review/`.
 
 **Daniel's projects (detected by `@materia/` imports or `.ruler/` directory):**
-- @agent-daniel-reviewer (uses `agents/daniel-reviewer.md`)
-- @agent-code-simplicity-reviewer
+- `agents/review/daniel-reviewer.md`
+- `agents/review/code-simplicity-reviewer.md`
 
 **TypeScript/React projects:**
-- @agent-daniel-reviewer (if Daniel's project, else kieran)
-- @agent-kieran-typescript-reviewer
-- @agent-architecture-strategist
+- `agents/review/daniel-reviewer.md` (if Daniel's project, else kieran)
+- `agents/review/kieran-typescript-reviewer.md`
+- `agents/review/architecture-strategist.md`
 
 **Rails projects:**
-- @agent-dhh-rails-reviewer
-- @agent-kieran-rails-reviewer
-- @agent-code-simplicity-reviewer
+- `agents/review/dhh-rails-reviewer.md`
+- `agents/review/kieran-rails-reviewer.md`
+- `agents/review/code-simplicity-reviewer.md`
 
 **Python projects:**
-- @agent-kieran-python-reviewer
-- @agent-performance-oracle
-- @agent-code-simplicity-reviewer
+- `agents/review/kieran-python-reviewer.md`
+- `agents/review/performance-oracle.md`
+- `agents/review/code-simplicity-reviewer.md`
 
 **General/Unknown:**
-- @agent-architecture-strategist
-- @agent-pattern-recognition-specialist
-- @agent-code-simplicity-reviewer
+- `agents/review/architecture-strategist.md`
+- `agents/review/pattern-recognition-specialist.md`
+- `agents/review/code-simplicity-reviewer.md`
+
+**Other specialized agents:**
+- `agents/review/security-sentinel.md` — Security audits
+- `agents/review/data-integrity-guardian.md` — Database/migration reviews
+- `agents/research/git-history-analyzer.md` — Git archaeology
 
 Detect project type by checking for: `.ruler/` or `@materia/` (Daniel's), `Gemfile` (Rails), `package.json` with React/TypeScript (TS), `pyproject.toml`/`requirements.txt` (Python).
 </reviewer_selection>

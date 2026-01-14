@@ -19,7 +19,19 @@ approaches, lessons learned, related features."
 ```
 Task Explore: "Analyze codebase structure, key patterns, and conventions.
 Focus on: architecture patterns, component organization, state management,
-testing approach, and any similar features that already exist."
+testing approach, and any similar features that already exist.
+
+Structure your findings as:
+## Architecture Patterns
+- Pattern with `file:line` reference
+
+## Existing Similar Features
+- Feature and where it lives
+
+## Essential Files for This Feature
+List 5-10 files most critical to understand before implementing:
+- `file.ts` — why it matters for this feature
+"
 ```
 
 **If extending existing feature, also spawn:**
@@ -37,6 +49,7 @@ any gotchas or issues that were fixed."
 - Review findings for relevant patterns
 - Note what can be reused vs. built fresh
 - Identify any constraints that affect design
+- **Share the Essential Files list with user** — these are required reading before implementation
 
 **Understand the idea:**
 - Ask questions **one at a time** to refine understanding

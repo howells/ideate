@@ -1,14 +1,15 @@
-# Ideate
+# Arc
 
-Turn ideas into validated designs through collaborative dialogue, then implement with TDD.
+The full arc from idea to shipped code.
 
 ## What It Does
 
-Ideate combines brainstorming, expert review, frontend-design, and execution into one unified workflow:
+Arc combines design, planning, TDD execution, expert review, and knowledge capture into one unified development workflow:
 
 1. **Design** — Socratic dialogue to refine your idea, with expert review woven throughout
 2. **Plan** — Break design into bite-sized TDD tasks with exact code
 3. **Execute** — Implement with continuous quality checks and checkpoints
+4. **Compound** — Document solutions to feed future sessions
 
 ## Key Principles
 
@@ -21,17 +22,20 @@ Ideate combines brainstorming, expert review, frontend-design, and execution int
 ## Installation
 
 ```bash
-claude plugins add github:danielhowells/ideate
+claude plugins add github:howells/arc
 ```
 
 ## Usage
 
 ```bash
-# Start the skill
+# Start the ideate skill
 /ideate
 
 # Or with an idea
 /ideate add user authentication with magic links
+
+# Document a solved problem
+/compound
 ```
 
 ## Workflows
@@ -43,6 +47,7 @@ claude plugins add github:danielhowells/ideate
 | **Execute plan** | Implementation with checkpoints + TS/lint |
 | **Review existing plan** | Parallel expert review of completed plan |
 | **Quick validation** | Fast sanity check on approach |
+| **Document solution** | Capture solved problems for future reference |
 
 ## What Makes It Different
 
@@ -64,17 +69,16 @@ claude plugins add github:danielhowells/ideate
 - Agent review after completion for quality check
 - No generic AI slop (Inter, purple gradients, cookie-cutter layouts)
 
-## Agents Used
+## Agents
 
-The skill spawns specialized agents throughout:
+Arc includes 15+ specialized agents for different stages:
 
-| Phase | Agents |
-|-------|--------|
-| Context gathering | `episodic-memory`, `Explore`, `git-history-analyzer` |
-| Implementation planning | `code-explorer`, `pattern-recognition-specialist`, `framework-docs-researcher` |
-| Design review | Project-specific reviewers (Rails/TypeScript/Python) |
-| Execution | `debugging-toolkit:debugger`, `frontend-design`, quality agents |
-| Final review | `code-simplicity-reviewer`, `architecture-strategist`, `security-sentinel` |
+| Category | Agents |
+|----------|--------|
+| **Research** | framework-docs-researcher, git-history-analyzer |
+| **Review** | architecture-strategist, code-simplicity-reviewer, daniel-reviewer, data-integrity-guardian, dhh-rails-reviewer, kieran-{typescript,rails,python}-reviewer, pattern-recognition-specialist, performance-oracle, security-sentinel |
+| **Design** | design-implementation-reviewer |
+| **Workflow** | spec-flow-analyzer |
 
 ## Reference Materials
 

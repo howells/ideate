@@ -52,7 +52,19 @@ Extract:
 ```
 Task code-explorer: "Find existing patterns in this codebase that we can
 reuse for: [list components/features from design].
-Look for: similar components, utility functions, hooks, types, test patterns."
+Look for: similar components, utility functions, hooks, types, test patterns.
+
+Structure your findings as:
+## Reusable Code
+- `file:line` — what it provides and how to use it
+
+## Similar Implementations
+- Feature and entry point file:line
+
+## Essential Files for This Feature
+List 5-10 files most critical to understand before implementing:
+- `file.ts` — why it matters
+"
 
 Task pattern-recognition-specialist: "Analyze coding conventions in this
 project. What naming patterns, file organization, and architectural patterns
@@ -68,6 +80,7 @@ Task framework-docs-researcher: "Gather documentation and best practices for
 **When agents complete:**
 - List reusable code (with file paths)
 - Note conventions to follow
+- **Share Essential Files list** — these should be read before implementation
 - Update task breakdown to use existing utilities
 
 ## Step 3: Break Down Into Tasks

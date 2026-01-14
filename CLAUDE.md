@@ -1,20 +1,25 @@
-# Ideate Plugin
+# Arc Plugin
 
-This plugin provides the `ideate` skill for turning ideas into validated designs and implementations.
+The full arc from idea to shipped code. This plugin provides skills for the complete development lifecycle.
 
 ## Structure
 
 ```
-ideate/
+arc/
 ├── .claude-plugin/
 │   └── manifest.json      # Plugin metadata
 ├── skills/
-│   └── ideate/
-│       ├── SKILL.md       # Main router
-│       ├── workflows/     # Step-by-step procedures
-│       └── references/    # Domain knowledge
+│   ├── ideate/            # Design & planning skill
+│   │   ├── SKILL.md       # Main router
+│   │   ├── workflows/     # Step-by-step procedures
+│   │   ├── references/    # Domain knowledge
+│   │   └── agents/        # Specialized agents
+│   └── design/            # Frontend design skill
+│       └── SKILL.md
 ├── commands/
-│   └── ideate.md          # /ideate slash command
+│   ├── ideate.md          # /ideate slash command
+│   ├── design.md          # /design slash command
+│   └── compound.md        # /compound slash command
 ├── CLAUDE.md              # This file
 ├── README.md              # Documentation
 └── LICENSE                # MIT
@@ -23,8 +28,8 @@ ideate/
 ## Development
 
 To test changes locally:
-1. Edit files in `skills/ideate/`
-2. Run `/ideate` to test the skill
+1. Edit files in `skills/`
+2. Run `/ideate` to test the main skill
 3. Iterate based on results
 
 ## Publishing
@@ -40,3 +45,4 @@ To test changes locally:
 - **Frontend-design integrated** — Bold aesthetic direction, not generic AI slop
 - **TDD mandatory** — Tests first, implementation second
 - **Continuous quality** — TS/lint after every task
+- **Knowledge compounds** — Solved problems documented for future sessions
