@@ -6,7 +6,7 @@ Ask user to describe their approach in 2-3 sentences, or share a brief summary.
 ## Step 2: Quick Context Check
 
 Quickly scan project for:
-- Project type (Rails/TypeScript/Python)
+- Project type (TypeScript/Python/Go)
 - Existing patterns that might be relevant
 - Constraints or conventions
 

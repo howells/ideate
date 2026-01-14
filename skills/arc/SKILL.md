@@ -107,30 +107,30 @@ Select reviewers based on detected project type. Use local agent definitions in 
 - `agents/review/code-simplicity-reviewer.md`
 
 **TypeScript/React projects:**
-- `agents/review/kieran-typescript-reviewer.md`
+- `agents/review/daniel-reviewer.md`
+- `agents/review/senior-reviewer.md`
 - `agents/review/architecture-strategist.md`
-- `agents/review/code-simplicity-reviewer.md`
 
-**Rails projects:**
-- `agents/review/dhh-rails-reviewer.md`
-- `agents/review/kieran-rails-reviewer.md`
-- `agents/review/code-simplicity-reviewer.md`
+**Next.js projects:**
+- `agents/review/lee-nextjs-reviewer.md`
+- `agents/review/daniel-reviewer.md`
+- `agents/review/senior-reviewer.md`
 
 **Python projects:**
-- `agents/review/kieran-python-reviewer.md`
+- `agents/review/senior-reviewer.md`
 - `agents/review/performance-oracle.md`
-- `agents/review/code-simplicity-reviewer.md`
+- `agents/review/architecture-strategist.md`
 
 **General/Unknown:**
+- `agents/review/senior-reviewer.md`
 - `agents/review/architecture-strategist.md`
-- `agents/review/pattern-recognition-specialist.md`
 - `agents/review/code-simplicity-reviewer.md`
 
 **Specialized agents:**
 - `agents/review/security-sentinel.md` — Security audits
 - `agents/review/data-integrity-guardian.md` — Database/migration reviews
 - `agents/research/git-history-analyzer.md` — Git archaeology
-- `agents/design/design-implementation-reviewer.md` — Design fidelity
+- `agents/design/figma-implement.md` — Implement UI from Figma designs
 - `agents/workflow/spec-flow-analyzer.md` — Spec analysis
 
 ## Directory Structure
@@ -144,6 +144,7 @@ skills/arc/
 │   ├── detail.md
 │   ├── implement.md
 │   ├── design.md
+│   ├── figma.md
 │   ├── build.md
 │   ├── test.md
 │   ├── letsgo.md

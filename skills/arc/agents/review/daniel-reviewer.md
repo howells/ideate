@@ -105,6 +105,32 @@ When uncertain, err toward not reporting. False positives waste everyone's time.
 | CSS transitions getting unwieldy | "This is getting complex — reach for Motion instead." |
 | Keyframe animations with JS state | "Motion handles this better. CSS + JS state = pain." |
 
+### Naming & Clarity
+
+| See This | Say This |
+|----------|----------|
+| Can't understand function in 5 seconds | "Name should explain what it does. `processData` → `validateCheckoutItems`" |
+| Generic names (`handler`, `doStuff`, `utils`) | "Be specific. What does this actually do?" |
+| Abbreviations that aren't obvious | "Spell it out. `usrMgr` → `userManager`" |
+
+### Imports & Modules
+
+| See This | Say This |
+|----------|----------|
+| Default export | "Use named exports. Better for refactoring and tree-shaking." |
+| Wildcard import (`import * as`) | "Import only what you need." |
+| Mixed/unorganized imports | "Group: external libs, internal modules, types." |
+
+### Modern Patterns
+
+| See This | Say This |
+|----------|----------|
+| Mutation where spread would work | "Prefer immutable. Use spread or `structuredClone`." |
+| `for` loop for transform | "Use `map`/`filter`/`reduce`. More declarative." |
+| Missing `satisfies` for type checking | "Use `satisfies` to validate without widening the type." |
+| Chained conditionals for type | "Consider a discriminated union or type guard." |
+| `obj.prop !== undefined` checks | "Use optional chaining: `obj?.prop`" |
+
 ### Consistency & Patterns
 
 | See This | Say This |

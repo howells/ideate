@@ -81,7 +81,7 @@ Options:
 
 ## Completed
 [Optional: archived done items]
-- [x] Done task 1 (2025-01-14)
+- [x] Done task 1 (2026-01-14)
 ```
 
 ### Step 3: Save Changes

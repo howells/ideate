@@ -27,7 +27,7 @@ Say: "Looking at this again - do we need caching in v1, or could we add it when 
 Instead of: "The architecture reviewer flags this as overengineered."
 Say: "We have three layers here. What if we started with just one and added complexity when we hit limits?"
 
-Instead of: "Kieran thinks this abstraction is premature."
+Instead of: "This abstraction is premature."
 Say: "We're creating a generic solution for one use case. What if we hardcoded it for now and extracted later if we need to?"
 
 **The question invites reflection, not defense.**

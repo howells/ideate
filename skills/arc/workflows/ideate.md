@@ -42,7 +42,7 @@ any gotchas or issues that were fixed."
 ```
 
 **While agents run, gather basics:**
-- Identify project type (Rails/TypeScript/Python) for reviewer selection
+- Identify project type (TypeScript/Python/Go) for reviewer selection
 - Note any obvious constraints from project structure
 
 **When Explore completes:**

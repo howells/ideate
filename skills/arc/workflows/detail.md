@@ -25,13 +25,13 @@ ls package-lock.json 2>/dev/null   # npm
 # Framework
 grep -l "next" package.json 2>/dev/null   # Next.js
 grep -l "react" package.json 2>/dev/null  # React
-ls Gemfile 2>/dev/null                     # Rails
+ls requirements.txt pyproject.toml 2>/dev/null  # Python
 ```
 
 **Record detected stack:**
-- Test runner: [vitest/jest/playwright/cypress/rspec/minitest]
-- Package manager: [pnpm/yarn/npm/bundler]
-- Framework: [next/react/rails/etc]
+- Test runner: [vitest/jest/playwright/cypress/pytest]
+- Package manager: [pnpm/yarn/npm/pip/uv]
+- Framework: [next/react/fastapi/etc]
 
 ## Step 2: Load Design Document
 
@@ -66,9 +66,8 @@ List 5-10 files most critical to understand before implementing:
 - `file.ts` — why it matters
 "
 
-Task pattern-recognition-specialist: "Analyze coding conventions in this
-project. What naming patterns, file organization, and architectural patterns
-should new code follow?"
+Task Explore: "Analyze coding conventions in this project. What naming patterns,
+file organization, and architectural patterns should new code follow?"
 ```
 
 **If using unfamiliar libraries/APIs:**

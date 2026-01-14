@@ -4,7 +4,7 @@ The full arc from idea to shipped code.
 
 ## What It Does
 
-Arc provides 12 commands covering the complete development lifecycle:
+Arc provides 13 commands covering the complete development lifecycle:
 
 ```
 WHY     /vision     - High-level goals (500-700 words)
@@ -81,6 +81,7 @@ Each step asks if you want to continue. You can also enter at any point:
 | `/detail` | Create implementation plan | `docs/plans/YYYY-MM-DD-<feature>-impl.md` |
 | `/implement` | Execute a plan | Code changes |
 | `/design` | UI/UX work | Wireframes + code |
+| `/figma` | Implement from Figma | Code matching design |
 | `/build` | Quick implementation | Code changes |
 | `/test` | Test strategy | Test files |
 | `/letsgo` | Ship to production | Deployment |
@@ -96,8 +97,8 @@ Arc includes 15+ specialized agents:
 | Category | Agents |
 |----------|--------|
 | **Research** | framework-docs-researcher, git-history-analyzer |
-| **Review** | architecture-strategist, code-simplicity-reviewer, daniel-reviewer, data-integrity-guardian, dhh-rails-reviewer, kieran-{typescript,rails,python}-reviewer, pattern-recognition-specialist, performance-oracle, security-sentinel |
-| **Design** | design-implementation-reviewer |
+| **Review** | architecture-strategist, code-simplicity-reviewer, daniel-reviewer, data-integrity-guardian, lee-nextjs-reviewer, performance-oracle, security-sentinel, senior-reviewer |
+| **Design** | figma-implement |
 | **Workflow** | spec-flow-analyzer |
 
 ## Disciplines

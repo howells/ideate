@@ -13,9 +13,9 @@
 ## Step 2: Detect Project Type
 
 Check for project markers:
-- `Gemfile` → Rails
-- `package.json` with React/TypeScript → TypeScript
+- `package.json` with Next.js/React → TypeScript
 - `pyproject.toml` or `requirements.txt` → Python
+- `go.mod` → Go
 - None of above → General
 
 Select reviewers based on project type (see SKILL.md `<reviewer_selection>`).
