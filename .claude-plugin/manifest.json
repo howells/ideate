@@ -1,0 +1,21 @@
+{
+  "name": "ideate",
+  "version": "1.0.0",
+  "description": "Turn ideas into validated designs through collaborative dialogue, then implement with TDD. Combines brainstorming, expert review, frontend-design, and execution into one unified workflow.",
+  "author": {
+    "name": "Daniel Howells",
+    "url": "https://github.com/danielhowells"
+  },
+  "repository": "https://github.com/danielhowells/ideate",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "planning",
+    "tdd",
+    "implementation",
+    "review",
+    "brainstorming",
+    "frontend",
+    "workflow"
+  ]
+}
