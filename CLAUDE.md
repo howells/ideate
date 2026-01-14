@@ -22,6 +22,7 @@ arc/
 │       │   ├── test.md
 │       │   ├── letsgo.md
 │       │   ├── deslop.md
+│       │   ├── review.md
 │       │   ├── tasklist.md
 │       │   ├── document.md
 │       │   └── suggest.md
@@ -44,6 +45,7 @@ arc/
 │   ├── test.md
 │   ├── letsgo.md
 │   ├── deslop.md
+│   ├── review.md
 │   ├── tasklist.md
 │   ├── document.md
 │   └── suggest.md
@@ -59,7 +61,7 @@ WHY     /vision     - High-level goals
 WHAT    /ideate     - From idea to working implementation
 HOW     /detail     - Detailed implementation plan
 DO      /implement, /design, /figma, /build, /test, /letsgo, /deslop
-CROSS   /tasklist, /document, /suggest
+CROSS   /review, /tasklist, /document, /suggest
 ```
 
 ## Development

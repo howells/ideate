@@ -24,6 +24,7 @@ DO      /implement  - Execute the plan with TDD
         /deslop     - Remove LLM artifacts
 
 CROSS-CUTTING
+        /review     - Review a plan for feasibility
         /tasklist   - Persistent task backlog
         /document   - Feature documentation
         /suggest    - Opinionated next-step recommendations
@@ -56,6 +57,7 @@ Each step asks if the user wants to continue to the next. The user can also ente
 | /test | Test strategy | Test files |
 | /letsgo | Ship to production | Deployment |
 | /deslop | Clean LLM artifacts | Code cleanup |
+| /review | Review a plan | Updated plan file |
 | /tasklist | Manage backlog | `docs/tasklist.md` |
 | /document | Document features | `docs/features/<feature>.md` |
 | /suggest | What to work on next | Recommendations |
@@ -76,13 +78,14 @@ Commands are handled by workflows in `workflows/`:
 | /test | `workflows/test.md` |
 | /letsgo | `workflows/letsgo.md` |
 | /deslop | `workflows/deslop.md` |
+| /review | `workflows/review.md` |
 | /tasklist | `workflows/tasklist.md` |
 | /document | `workflows/document.md` |
 | /suggest | `workflows/suggest.md` |
 | /commit | `workflows/commit.md` |
 
 Supporting workflows:
-- `workflows/expert-review.md` - Parallel expert review
+- `workflows/expert-review.md` - Parallel expert review (used by `/ideate` and `/review`)
 - `workflows/quick-validation.md` - Fast sanity check
 
 ## Essential Principles
@@ -186,6 +189,7 @@ Commands work together:
 
 - `/suggest` reads `/tasklist`, codebase, and `/vision` (priority cascade)
 - `/ideate` can flow to `/detail` → `/implement`
+- `/review` uses `workflows/expert-review.md` to review Claude Code plans or plans from `docs/plans/`
 - `/build` suggests `/ideate` if scope is too large
 - `/letsgo` runs `/test` and `/deslop` as part of quality checks
 - `/implement` follows `disciplines/test-driven-development.md`

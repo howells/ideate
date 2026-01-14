@@ -6,9 +6,22 @@
 <process>
 ## Step 1: Load the Plan
 
-**If plan path provided:** Read the plan file.
+**Plan can come from multiple sources:**
 
-**If no path provided:** Ask user for the plan file path or to paste the plan content.
+1. **Passed as argument** — Plan file path or content provided by calling workflow (e.g., from `/review`)
+   - If file path → read the file
+   - If content → use directly
+
+2. **Conversation context** — Claude Code's plan mode output
+   - Look for plan structure in recent messages
+   - Extract and use
+
+3. **User input** — If no plan found
+   - Ask user for the plan file path or to paste the plan content
+
+**Store:**
+- Plan content
+- Source (file path, conversation, or user-provided)
 
 ## Step 2: Detect Project Type
 
@@ -66,11 +79,36 @@ For kept items:
 
 ## Step 6: Finalize
 
-If plan was modified:
-- Write updated plan
-- Commit changes
+**If plan came from a file:**
+- Write updated plan with accepted changes
+- Add "## Review Notes" section:
+  - Date reviewed
+  - Reviewers consulted
+  - Key decisions and rationale
+- Commit changes:
+  ```bash
+  git add docs/plans/
+  git commit -m "docs: review and update [plan name]"
+  ```
 
-Present summary of review outcomes.
+**If plan came from conversation (Claude Code plan mode):**
+- Summarize recommended changes
+- Note: "These are suggestions for your plan. You can accept them in plan mode before proceeding."
+
+**If plan was user-provided:**
+- Summarize recommended changes
+- User can apply to their plan as they see fit
+
+**Present summary:**
+```
+Review complete!
+
+✓ Accepted changes: [count]
+→ Kept as-is: [count]
+💬 Discussed: [count]
+
+[Brief summary of key decisions]
+```
 </process>
 
 <success_criteria>

@@ -11,7 +11,7 @@ The full arc from idea to shipped code. A [Claude Code](https://docs.anthropic.c
 
 ## What It Does
 
-Arc provides 14 commands covering the complete development lifecycle:
+Arc provides 15 commands covering the complete development lifecycle:
 
 ```
 WHY     /vision     - High-level goals (500-700 words)
@@ -28,6 +28,7 @@ DO      /implement  - Execute the plan with TDD
         /deslop     - Remove LLM artifacts
 
 CROSS-CUTTING
+        /review     - Review a plan for feasibility
         /tasklist   - Persistent task backlog
         /document   - Feature documentation
         /suggest    - Opinionated next-step recommendations
@@ -156,6 +157,7 @@ Each step asks if you want to continue. You can also enter at any point:
 | `/test` | Test strategy | Test files |
 | `/letsgo` | Ship to production | Deployment |
 | `/deslop` | Clean LLM artifacts | Code cleanup |
+| `/review` | Review a plan for feasibility | Updated plan file |
 | `/tasklist` | Manage backlog | `docs/tasklist.md` |
 | `/document` | Document features | `docs/features/<feature>.md` |
 | `/suggest` | What to work on next | Recommendations |
