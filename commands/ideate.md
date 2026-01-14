@@ -1,5 +1,5 @@
 ---
-description: Socratic exploration to deeply consider what to build. Creates a design doc, optionally flows to detail and implement.
+description: From idea to working implementation. Socratic exploration, validation, planning, and building—all in one flow.
 argument-hint: "[feature idea or problem to solve]"
 ---
 

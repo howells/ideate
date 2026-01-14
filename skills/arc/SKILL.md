@@ -12,7 +12,7 @@ The full arc from idea to shipped code.
 ```
 WHY     /vision     - High-level goals (500-700 words)
           ↓
-WHAT    /ideate     - Socratic exploration → PRD
+WHAT    /ideate     - From idea to working implementation
           ↓
 HOW     /detail     - Detailed implementation plan
           ↓
@@ -48,7 +48,7 @@ Each step asks if the user wants to continue to the next. The user can also ente
 | Command | When to use | Output location |
 |---------|-------------|-----------------|
 | /vision | Starting a new project | `docs/vision.md` |
-| /ideate | Turn idea into design | `docs/plans/YYYY-MM-DD-<feature>.md` |
+| /ideate | From idea to working implementation | `docs/plans/YYYY-MM-DD-<feature>.md` |
 | /detail | Create implementation plan | `docs/plans/YYYY-MM-DD-<feature>-impl.md` |
 | /implement | Execute a plan | Code changes |
 | /design | UI/UX work | Wireframes + code |

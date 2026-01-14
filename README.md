@@ -16,7 +16,7 @@ Arc provides 14 commands covering the complete development lifecycle:
 ```
 WHY     /vision     - High-level goals (500-700 words)
           ↓
-WHAT    /ideate     - Socratic exploration → PRD
+WHAT    /ideate     - From idea to working implementation
           ↓
 HOW     /detail     - Detailed implementation plan
           ↓
@@ -147,7 +147,7 @@ Each step asks if you want to continue. You can also enter at any point:
 | Command | When to use | Output |
 |---------|-------------|--------|
 | `/vision` | Starting a new project | `docs/vision.md` |
-| `/ideate` | Turn idea into design | `docs/plans/YYYY-MM-DD-<feature>.md` |
+| `/ideate` | From idea to working implementation | `docs/plans/YYYY-MM-DD-<feature>.md` |
 | `/detail` | Create implementation plan | `docs/plans/YYYY-MM-DD-<feature>-impl.md` |
 | `/implement` | Execute a plan | Code changes |
 | `/design` | UI/UX work | Wireframes + code |
