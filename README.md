@@ -9,7 +9,7 @@ The full arc from idea to shipped code. A [Claude Code](https://docs.anthropic.c
 
 ## What It Does
 
-Arc provides 13 commands covering the complete development lifecycle:
+Arc provides 14 commands covering the complete development lifecycle:
 
 ```
 WHY     /vision     - High-level goals (500-700 words)
@@ -29,6 +29,8 @@ CROSS-CUTTING
         /tasklist   - Persistent task backlog
         /document   - Feature documentation
         /suggest    - Opinionated next-step recommendations
+
+TOOLS   /commit     - Smart commit + push with auto-splitting
 ```
 
 ## Key Principles
@@ -155,6 +157,7 @@ Each step asks if you want to continue. You can also enter at any point:
 | `/tasklist` | Manage backlog | `docs/tasklist.md` |
 | `/document` | Document features | `docs/features/<feature>.md` |
 | `/suggest` | What to work on next | Recommendations |
+| `/commit` | Commit and push changes | Git commits |
 
 ## Agents
 

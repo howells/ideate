@@ -27,6 +27,8 @@ CROSS-CUTTING
         /tasklist   - Persistent task backlog
         /document   - Feature documentation
         /suggest    - Opinionated next-step recommendations
+
+TOOLS   /commit     - Smart commit + push with auto-splitting
 ```
 
 ## Primary Flow
@@ -57,6 +59,7 @@ Each step asks if the user wants to continue to the next. The user can also ente
 | /tasklist | Manage backlog | `docs/tasklist.md` |
 | /document | Document features | `docs/features/<feature>.md` |
 | /suggest | What to work on next | Recommendations |
+| /commit | Commit and push changes | Git commits |
 
 ## Routing
 
@@ -76,6 +79,7 @@ Commands are handled by workflows in `workflows/`:
 | /tasklist | `workflows/tasklist.md` |
 | /document | `workflows/document.md` |
 | /suggest | `workflows/suggest.md` |
+| /commit | `workflows/commit.md` |
 
 Supporting workflows:
 - `workflows/expert-review.md` - Parallel expert review
