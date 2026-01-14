@@ -1,6 +1,6 @@
 # Arc
 
-The full arc from idea to shipped code.
+The full arc from idea to shipped code. A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin.
 
 ## What It Does
 
@@ -41,24 +41,59 @@ CROSS-CUTTING
 claude plugins add github:howells/arc
 ```
 
-## Usage
+## Getting Started
+
+If you're new to Claude Code, here's how Arc works:
+
+### 1. Open your project
 
 ```bash
-# Start with vision (optional)
-/vision
+cd your-project
+claude
+```
 
-# Main entry point - design and plan
+This starts an interactive Claude Code session in your terminal.
+
+### 2. Run a command
+
+Commands start with `/`. Type the command and press Enter:
+
+```
 /ideate add user authentication with magic links
+```
 
-# Quick build (no formal planning)
-/build add a logout button
+Claude will ask clarifying questions, explore your codebase, and create a design document.
 
-# What should I work on next?
+### 3. Follow the flow
+
+Arc commands chain together. After `/ideate` creates a design:
+- Claude asks if you want to continue to `/detail` (implementation plan)
+- Then to `/implement` (write the code with TDD)
+
+You can also jump in at any point if you already have docs.
+
+### Quick Examples
+
+```bash
+# Design a new feature (full flow)
+/ideate add a notification system
+
+# Quick build without formal planning
+/build add a logout button to the header
+
+# Get suggestions for what to work on
 /suggest
 
-# Ready to ship?
+# Ship to production
 /letsgo
 ```
+
+### Tips for Newcomers
+
+- **One question at a time** — Arc asks focused questions, not overwhelming lists
+- **You're in control** — Suggestions are questions, not mandates. Say no if you disagree.
+- **TDD by default** — Implementation writes tests first, then code
+- **Documents are created** — Plans go in `docs/plans/`, features in `docs/features/`
 
 ## Primary Flow
 
@@ -92,7 +127,7 @@ Each step asks if you want to continue. You can also enter at any point:
 
 ## Agents
 
-Arc includes 15+ specialized agents:
+Arc includes 12 specialized agents:
 
 | Category | Agents |
 |----------|--------|
@@ -120,6 +155,13 @@ Commands work together:
 - `/build` suggests `/ideate` if scope is too large
 - `/letsgo` runs `/test` and `/deslop` as part of quality checks
 - Any command can add to `/tasklist`
+
+## Acknowledgments
+
+Arc builds on patterns and disciplines from:
+
+- [superpowers](https://github.com/chadgauth/superpowers) — Implementation disciplines (TDD, debugging, verification)
+- [compound-engineering](https://github.com/minuva/compound-engineering) — Agent patterns and workflows
 
 ## License
 
