@@ -1,5 +1,5 @@
 <overview>
-Frontend work requires intentional aesthetic direction. Generic "AI slop" (Inter font, purple gradients, predictable layouts) is unacceptable. Every UI decision should be deliberate and memorable.
+Frontend work requires intentional aesthetic direction. Generic "AI slop" (purple gradients, predictable layouts) is unacceptable. Every UI decision should be deliberate and memorable.
 </overview>
 
 <design_thinking>
@@ -34,9 +34,25 @@ Frontend work requires intentional aesthetic direction. Generic "AI slop" (Inter
 
 <aesthetic_principles>
 **Typography:**
-- NEVER: Inter, Roboto, Arial, system fonts
+- NEVER: Roboto, Arial, system-ui defaults
 - DO: Distinctive, characterful fonts that elevate the design
 - Pair a display font with a refined body font
+
+**Recommended fonts:**
+- Sans: Inter, DM Sans, Sohne, Scto Grotesk, Instrument Sans, Space Grotesk, Bricolage Grotesque, Outfit
+- Serif: Instrument Serif, Newsreader, Fraunces, Cormorant, Crimson Pro, Libre Baskerville
+- Display: Novarese, Editorial New
+- Mono: Geist Mono, IBM Plex Mono, JetBrains Mono, Fira Code
+
+**Commercial foundries (require license):**
+- Grilli Type: GT America, GT Walsheim, GT Sectra, GT Flexa
+- Commercial Type: Graphik, Canela, Dala Floda, Austin
+- Klim: Söhne, Untitled Sans, Tiempos
+- Colophon: Apercu, Reader, Basis Grotesque
+- Dinamo: ABC Favorit, ABC Diatype, ABC Arizona
+- Sharp Type: Sharp Grotesk, Sharp Sans
+
+Ask the user where their fonts folder is to check available licensed fonts before selecting.
 
 **Color:**
 - NEVER: Purple gradients on white (AI cliché)
@@ -73,7 +89,7 @@ Elegance = executing the vision fully, not hedging.
 
 <anti_patterns>
 **Generic AI aesthetics to avoid:**
-- Inter/Roboto/Arial fonts
+- Roboto/Arial/system-ui defaults
 - Purple-to-blue gradients
 - White backgrounds with gray cards
 - Predictable grid layouts
