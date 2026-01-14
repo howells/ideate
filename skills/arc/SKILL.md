@@ -132,6 +132,7 @@ See `references/model-strategy.md` for which AI model to use for different tasks
 - `agents/review/security-sentinel.md` — Security audits
 - `agents/review/data-integrity-guardian.md` — Database/migration reviews
 - `agents/research/git-history-analyzer.md` — Git archaeology
+- `agents/research/duplicate-detector.md` — Find semantic code duplication
 - `agents/design/figma-implement.md` — Implement UI from Figma designs
 - `agents/workflow/spec-flow-analyzer.md` — Spec analysis
 

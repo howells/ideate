@@ -128,11 +128,11 @@ Each step asks if you want to continue. You can also enter at any point:
 
 ## Agents
 
-Arc includes 12 specialized agents:
+Arc includes 13 specialized agents:
 
 | Category | Agents |
 |----------|--------|
-| **Research** | framework-docs-researcher, git-history-analyzer |
+| **Research** | framework-docs-researcher, git-history-analyzer, duplicate-detector |
 | **Review** | architecture-strategist, code-simplicity-reviewer, daniel-reviewer, data-integrity-guardian, lee-nextjs-reviewer, performance-oracle, security-sentinel, senior-reviewer |
 | **Design** | figma-implement |
 | **Workflow** | spec-flow-analyzer |
