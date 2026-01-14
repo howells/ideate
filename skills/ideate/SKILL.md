@@ -94,6 +94,7 @@ All domain knowledge in `references/`:
 **Implementation:**
 - [testing-patterns.md](references/testing-patterns.md) - Vitest, Playwright, TDD cycle
 - [task-granularity.md](references/task-granularity.md) - Bite-sized tasks, commit patterns
+- [model-strategy.md](references/model-strategy.md) - Haiku/sonnet/opus allocation for agents
 
 **Knowledge capture:**
 - [solution-schema.md](references/solution-schema.md) - YAML frontmatter, problem types, severity levels

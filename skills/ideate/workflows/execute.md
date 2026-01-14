@@ -77,7 +77,7 @@ pnpm biome check --write .
 - Don't accumulate debt
 - If stuck on a type issue → spawn a quick agent:
   ```
-  Task general-purpose: "Fix TypeScript error in [file]: [error message]"
+  Task general-purpose model: haiku: "Fix TypeScript error in [file]: [error message]"
   ```
 
 **Why continuous:**
@@ -94,7 +94,7 @@ pnpm biome check --write .
 **If test doesn't pass after implementation:**
 Spawn debugger agent immediately:
 ```
-Task debugging-toolkit:debugger: "Test failing unexpectedly.
+Task debugging-toolkit:debugger model: sonnet: "Test failing unexpectedly.
 Test file: [path]
 Test name: [name]
 Error: [error message]
@@ -167,7 +167,7 @@ mcp__figma__get_screenshot: fileKey, nodeId
 **After completing ALL UI tasks — INVOKE FRONTEND-DESIGN FOR REVIEW:**
 
 ```
-Task compound-engineering:frontend-design: "Review the completed UI implementation.
+Task compound-engineering:frontend-design model: opus: "Review the completed UI implementation.
 
 Aesthetic Direction (from design doc):
 - Tone: [tone]
@@ -208,9 +208,9 @@ Use current documentation to ensure correct API usage.
 **Always run (in parallel agents for speed):**
 
 ```
-Task general-purpose: "Run TypeScript check (tsc --noEmit) and fix any errors"
-Task general-purpose: "Run Biome check (biome check --write .) and fix any issues"
-Task general-purpose: "Run test suite and report results"
+Task general-purpose model: haiku: "Run TypeScript check (tsc --noEmit) and fix any errors"
+Task general-purpose model: haiku: "Run Biome check (biome check --write .) and fix any issues"
+Task general-purpose model: haiku: "Run test suite and report results"
 ```
 
 Wait for all agents to complete. If issues found, fix before proceeding.
@@ -221,10 +221,10 @@ For significant features, offer parallel review:
 
 "Feature complete. Run expert review before PR?"
 
-If yes, spawn in parallel:
-- code-simplicity-reviewer
-- architecture-strategist (or domain-specific reviewer)
-- security-sentinel (if auth/data involved)
+If yes, spawn in parallel (all use sonnet for balanced cost/quality):
+- code-simplicity-reviewer (model: sonnet)
+- architecture-strategist or domain-specific reviewer (model: sonnet)
+- security-sentinel if auth/data involved (model: sonnet)
 
 Present findings as Socratic questions (see `references/review-patterns.md`).
 

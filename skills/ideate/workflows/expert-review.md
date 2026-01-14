@@ -24,6 +24,11 @@ Select reviewers based on project type (see SKILL.md `<reviewer_selection>`).
 
 Spawn 3 reviewer agents in parallel using Task tool.
 
+**Model selection for reviewers:**
+- Most reviewers: `model: sonnet` (balanced cost/quality for code review)
+- Architecture strategist: `model: sonnet` (systems thinking)
+- Daniel reviewer (for Daniel's projects): `model: sonnet`
+
 Each reviewer gets:
 - The full plan content
 - Instructions to focus on their specialty
