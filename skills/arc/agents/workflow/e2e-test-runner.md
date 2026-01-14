@@ -110,14 +110,39 @@ Repeat Steps 3-4 until all tests pass.
 | Click intercepted | Overlay/modal blocking | Wait for overlay to close, or click through |
 | Navigation timeout | Slow page load | Increase timeout or add waitForLoadState |
 
+## Selector Strategy
+
+**Prefer `data-testid` for reliable element location.**
+
+When writing or fixing tests, use this selector priority:
+
+1. **`data-testid`** — Most reliable, won't break with UI changes
+2. **Role + name** — `getByRole('button', { name: 'Submit' })`
+3. **Label** — `getByLabel('Email address')`
+4. **Text** — `getByText('Welcome back')` (fragile if copy changes)
+5. **CSS/xpath** — Last resort, breaks easily
+
+**When creating tests, add `data-testid` to components:**
+```tsx
+<button data-testid="submit-order">Place Order</button>
+```
+
+```ts
+// In test
+await page.getByTestId('submit-order').click()
+```
+
+**If a selector keeps breaking:** Add a `data-testid` to the component rather than writing increasingly complex selectors.
+
 ## Red Flags
 
 **Never:**
 - Disable or skip tests to make suite pass
 - Add arbitrary sleeps (use proper waits)
 - Catch and ignore errors in tests
+- Use fragile CSS selectors when `data-testid` would be more stable
 
 **Always:**
-- Use semantic selectors (role, label) over CSS/xpath when possible
+- Add `data-testid` attributes when writing new testable components
 - Wait for specific conditions, not arbitrary time
 - Report flaky tests even if they eventually pass
