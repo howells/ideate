@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/arc-header-dark.svg">
+  <img alt="Arc — The full arc from idea to shipped code" src="assets/arc-header-light.svg">
+</picture>
+
 # Arc
 
 The full arc from idea to shipped code. A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugin.
@@ -41,6 +46,19 @@ CROSS-CUTTING
 /plugin marketplace add howells/arc
 /plugin install arc@howells-arc
 ```
+
+## Dependencies
+
+Arc uses these plugins for enhanced functionality:
+
+| Plugin | Used by | Install |
+|--------|---------|---------|
+| **Figma** | `/ideate`, `/detail`, `/figma` | `/plugin install figma@claude-plugins-official` |
+| **Context7** | `/implement` | `/plugin install context7@claude-plugins-official` |
+| **Episodic Memory** | `/ideate`, `/document` | `/plugin install episodic-memory@superpowers-marketplace` |
+| **Chrome** | `figma-implement` agent | [Claude in Chrome extension](https://chromewebstore.google.com/detail/claude-in-chrome/) |
+
+Arc works without these, but relevant features will be limited.
 
 ## Getting Started
 
