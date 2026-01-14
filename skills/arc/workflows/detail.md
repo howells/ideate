@@ -228,14 +228,31 @@ git add docs/plans/
 git commit -m "docs: add <topic> implementation plan"
 ```
 
-**Ask:**
-"Implementation plan ready. How would you like to proceed?"
+**Check workspace:**
+```bash
+git branch --show-current
+```
+
+**If on main/master and plan involves multiple files:**
+```
+"Implementation plan ready. Before executing, I recommend setting up a worktree to keep main clean."
+```
 
 Options:
-1. **Execute now** → Route to `workflows/execute.md`
-2. **Set up worktree first** → Create worktree, then execute
+1. **Set up worktree and execute** (Recommended) → Follow `disciplines/using-git-worktrees.md`, then route to `workflows/implement.md`
+2. **Execute on current branch** → Route to `workflows/implement.md` directly
 3. **Review plan first** → Open for user review, then decide
 4. **Done for now** → End session
+
+**If already on feature branch:**
+```
+"Implementation plan ready. How would you like to proceed?"
+```
+
+Options:
+1. **Execute now** → Route to `workflows/implement.md`
+2. **Review plan first** → Open for user review
+3. **Done for now** → End session
 </process>
 
 <success_criteria>

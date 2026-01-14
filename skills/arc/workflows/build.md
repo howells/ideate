@@ -24,7 +24,24 @@ Want me to run /ideate instead?"
 ```
 Wait for response. If yes, invoke ideate workflow.
 
-**If scope is small/medium:** Proceed.
+**If scope is small/medium:** Proceed to Step 2.
+
+### Step 1b: Consider Worktree
+
+If not already on a feature branch:
+
+```bash
+git branch --show-current
+```
+
+**If on main/master:**
+```
+"I recommend creating a feature branch and worktree for this work. Keeps main clean and allows easy rollback."
+```
+
+Options:
+1. **Yes, set up worktree** (Recommended for multi-file changes) → Follow `disciplines/using-git-worktrees.md`
+2. **No, work on main** → Proceed (fine for trivial single-file fixes)
 
 ### Step 2: Quick Mental Model
 

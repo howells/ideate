@@ -277,12 +277,24 @@ git commit -m "docs: add <topic> design plan"
 ```
 
 **Implementation handoff:**
-Ask: "Ready to create the implementation plan?"
+
+Before implementation, set up an isolated workspace. Follow `disciplines/using-git-worktrees.md`:
+
+```
+"Design ready! I recommend creating a feature branch and worktree to keep main clean and allow easy rollback."
+```
 
 Options:
-1. **Yes, create implementation plan** → Route to `workflows/create-implementation-plan.md`
-2. **Yes, and set up worktree** → Create worktree first, then implementation plan
-3. **No, just the design for now** → Done
+1. **Set up worktree and continue** (Recommended) → Follow `disciplines/using-git-worktrees.md`, then route to `workflows/detail.md`
+2. **Skip worktree, just plan** → Route to `workflows/detail.md` directly
+3. **Done for now** → Just the design
+
+**If setting up worktree:**
+1. Follow the directory selection process in `disciplines/using-git-worktrees.md`
+2. Create branch: `feature/<topic-slug>`
+3. Run project setup (auto-detect from package.json, Cargo.toml, etc.)
+4. Verify clean baseline (tests pass)
+5. Then proceed to implementation planning
 
 If creating implementation plan:
 - Detect test frameworks (vitest, playwright, jest, etc.)
