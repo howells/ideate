@@ -1,6 +1,8 @@
 ---
-description: Turn ideas into validated designs through collaborative dialogue with built-in expert review. Use before any creative work - features, components, refactors.
-argument-hint: "[idea, design doc, or implementation plan]"
+description: Socratic exploration to deeply consider what to build. Creates a design doc, optionally flows to detail and implement.
+argument-hint: "[feature idea or problem to solve]"
 ---
 
-Invoke the ideate skill for: $ARGUMENTS
+Invoke the arc skill with workflow: ideate
+
+$ARGUMENTS

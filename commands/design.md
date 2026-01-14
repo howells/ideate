@@ -1,6 +1,8 @@
 ---
-description: Create distinctive, production-grade frontend interfaces. Use when building web components, pages, or applications. Avoids generic AI aesthetics.
-argument-hint: "[component or page to build]"
+description: UI design or redesign. Create distinctive, non-generic interfaces with intentional aesthetic direction.
+argument-hint: "[component, page, or 'review existing']"
 ---
 
-Invoke the design skill for: $ARGUMENTS
+Invoke the arc skill with workflow: design
+
+$ARGUMENTS
