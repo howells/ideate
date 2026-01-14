@@ -102,6 +102,8 @@ Write tests first, then make them pass. See `disciplines/test-driven-development
 
 Select reviewers based on detected project type. Use local agent definitions in `agents/review/`.
 
+See `references/model-strategy.md` for which AI model to use for different tasks (haiku for mechanical, sonnet for review, opus for creative/design).
+
 **Daniel's projects (detected by `@materia/` imports or `.ruler/` directory):**
 - `agents/review/daniel-reviewer.md`
 - `agents/review/code-simplicity-reviewer.md`
@@ -168,6 +170,7 @@ skills/arc/
 │   ├── design-phases.md
 │   ├── testing-patterns.md
 │   ├── task-granularity.md
+│   ├── model-strategy.md   # Which AI model for which task
 │   └── ...
 └── templates/            # Output templates
 ```
