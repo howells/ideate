@@ -1,10 +1,10 @@
 {
   "name": "arc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The full arc from idea to shipped code. Combines design, planning, TDD execution, expert review, and knowledge capture into one unified development workflow.",
   "author": {
     "name": "Daniel Howells",
-    "url": "https://github.com/danielhowells"
+    "url": "https://github.com/howells"
   },
   "repository": "https://github.com/howells/arc",
   "license": "MIT",
