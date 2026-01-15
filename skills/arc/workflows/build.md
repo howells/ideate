@@ -93,6 +93,13 @@ Task e2e-test-runner model: sonnet: "Run e2e tests and fix any failures"
 
 Spawning a separate agent keeps verbose e2e output from filling context.
 
+### Step 5b: React/Next.js Performance Check (Optional)
+
+For React/Next.js projects, if `vercel-react-best-practices` skill is available:
+```
+Skill vercel-react-best-practices: "Quick review of [component/feature] for performance issues"
+```
+
 ### Step 6: Offer Next Steps
 
 "Build complete. Would you like to:"

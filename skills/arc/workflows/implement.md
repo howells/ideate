@@ -192,6 +192,12 @@ Check for:
 - Compare against Figma screenshot
 - Address any review findings before proceeding
 
+**Optional: Web Interface Guidelines Review**
+If `web-design-guidelines` skill is available:
+```
+Skill web-design-guidelines: "Review [components] for Web Interface Guidelines compliance"
+```
+
 **When implementing unfamiliar library APIs:**
 ```
 mcp__context7__resolve-library-id: "[library name]"
@@ -214,6 +220,12 @@ Task general-purpose model: haiku: "Run test suite and report results"
 ```
 
 Wait for all agents to complete. If issues found, fix before proceeding.
+
+**Optional: React/Next.js Performance Review**
+For React/Next.js projects, if `vercel-react-best-practices` skill is available:
+```
+Skill vercel-react-best-practices: "Review implementation for React/Next.js performance patterns"
+```
 
 ## Phase 5b: E2E Tests (If Created)
 

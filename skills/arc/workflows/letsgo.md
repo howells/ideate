@@ -39,6 +39,7 @@ Go through each category. Check status, note gaps.
 - [ ] Bundle size reasonable
 - [ ] No console errors in production build
 - [ ] Core Web Vitals passing
+- [ ] React/Next.js best practices applied (see Step 1b)
 
 ### Security
 - [ ] No secrets in client code
@@ -62,6 +63,16 @@ Go through each category. Check status, note gaps.
 - [ ] Analytics configured (if wanted)
 - [ ] Uptime monitoring (optional)
 ```
+
+### Step 1b: React/Next.js Performance Review (Optional)
+
+If this is a React/Next.js project and `vercel-react-best-practices` skill is available:
+```
+Skill vercel-react-best-practices: "Review performance patterns in this Next.js app.
+Check: component rendering, data fetching, bundle optimization"
+```
+
+This provides expert guidance from Vercel Engineering on React/Next.js optimization.
 
 ### Step 2: Address Gaps
 
@@ -87,15 +98,23 @@ pnpm biome check .
 
 If all checks pass:
 ```bash
-# Deploy
+# Deploy via Vercel CLI
 vercel --prod
 
-# Or via git
+# Or via git (if Vercel GitHub integration set up)
 git push origin main
 ```
+
+**If `vercel:deploy` skill is available:**
+```
+Skill vercel:deploy
+```
+This handles the deployment workflow with proper verification.
 
 ## Interop
 
 - Runs **/test** as part of quality check
 - Runs **/deslop** as part of quality check
 - References **/vision** to verify alignment
+- Can invoke **vercel-react-best-practices** skill for performance review (if available)
+- Can invoke **vercel:deploy** skill for deployment (if available)

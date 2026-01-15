@@ -68,6 +68,21 @@ To test changes locally:
 - **Continuous quality** — TS/lint after every task
 - **Knowledge compounds** — Solved problems documented for future sessions
 
+## Complementary Plugins
+
+Arc focuses on the development lifecycle. For specialized domains, consider these Vercel Labs plugins:
+
+- **[agent-skills](https://github.com/vercel-labs/agent-skills)** — `vercel-react-best-practices` skill for React/Next.js performance patterns
+- **[web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines)** — `web-design-guidelines` skill for UI compliance review
+
+**When installed, Arc workflows will suggest these skills:**
+| Arc Command | Complementary Skill | Use Case |
+|-------------|-------------------|----------|
+| `/arc:design` | `web-design-guidelines` | UI compliance review |
+| `/arc:build` | `vercel-react-best-practices` | React/Next.js performance |
+| `/arc:implement` | Both | Quality checkpoints |
+| `/arc:letsgo` | `vercel-react-best-practices`, `vercel:deploy` | Production readiness |
+
 ## Publishing
 
 1. Bump version in `.claude-plugin/manifest.json`

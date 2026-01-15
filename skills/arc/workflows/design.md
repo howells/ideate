@@ -75,8 +75,19 @@ From `references/frontend-design.md`:
 - Generic Heroicons
 - Cookie-cutter component patterns
 
+### Step 6: Optional UI Compliance Review
+
+If the `web-design-guidelines` skill is available:
+```
+Skill web-design-guidelines: "Review the design against Web Interface Guidelines.
+Focus on: [specific areas of concern]"
+```
+
+This provides external validation against established UI best practices.
+
 ## Interop
 
 - Can invoke **/build** for quick implementation
 - Can invoke **/implement** for planned implementation
 - Aesthetic direction feeds into implementation tasks
+- Can invoke **web-design-guidelines** skill for compliance review (if available)
