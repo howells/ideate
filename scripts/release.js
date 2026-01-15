@@ -177,6 +177,14 @@ function hasUncommittedChanges() {
   }
 }
 
+function getChangelogSection(version) {
+  if (!fs.existsSync(CHANGELOG_PATH)) return null;
+  const changelog = fs.readFileSync(CHANGELOG_PATH, 'utf8');
+  const regex = new RegExp(`## \\[${version}\\][^\\n]*\\n([\\s\\S]*?)(?=\\n## \\[|$)`);
+  const match = changelog.match(regex);
+  return match ? match[1].trim() : null;
+}
+
 // Main
 console.log('🚀 Arc Plugin Release\n');
 
@@ -223,7 +231,20 @@ console.log('✓ Committed changes');
 exec(`git tag -a v${newVersion} -m "Release v${newVersion}"`);
 console.log(`✓ Created tag v${newVersion}`);
 
-console.log(`\n✨ Release v${newVersion} ready!`);
-console.log('\nNext steps:');
-console.log(`   git push origin main --tags`);
-console.log('\n   GitHub Action will create the release automatically.');
+// Push and create release
+console.log('\n🚀 Pushing to origin...');
+exec('git push origin main --tags');
+console.log('✓ Pushed to origin');
+
+// Create GitHub release
+console.log('\n📦 Creating GitHub release...');
+try {
+  const releaseNotes = getChangelogSection(newVersion);
+  const notesArg = releaseNotes ? `--notes "${releaseNotes.replace(/"/g, '\\"')}"` : '--generate-notes';
+  exec(`gh release create v${newVersion} --title "v${newVersion}" ${notesArg}`);
+  console.log(`✓ Created GitHub release v${newVersion}`);
+} catch (err) {
+  console.log('⚠️  Could not create GitHub release (gh CLI may not be configured)');
+}
+
+console.log(`\n✨ Release v${newVersion} complete!`);
