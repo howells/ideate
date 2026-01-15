@@ -7,37 +7,34 @@ The full arc from idea to shipped code. This plugin provides 15 commands for the
 ```
 arc/
 ├── .claude-plugin/
-│   └── plugin.json        # Plugin metadata
-├── skills/
-│   └── arc/               # Main skill (commands auto-registered as /arc:*)
-│       ├── SKILL.md       # Router and principles
-│       ├── workflows/     # Command implementations
-│       │   ├── vision.md
-│       │   ├── ideate.md
-│       │   ├── detail.md
-│       │   ├── implement.md
-│       │   ├── design.md
-│       │   ├── figma.md
-│       │   ├── build.md
-│       │   ├── test.md
-│       │   ├── letsgo.md
-│       │   ├── deslop.md
-│       │   ├── review.md
-│       │   ├── tasklist.md
-│       │   ├── document.md
-│       │   ├── suggest.md
-│       │   └── commit.md
-│       ├── agents/        # Specialized reviewers
-│       │   ├── review/
-│       │   ├── research/
-│       │   ├── design/
-│       │   └── workflow/
-│       ├── disciplines/   # Implementation methodologies
-│       ├── references/    # Domain knowledge
-│       └── templates/     # Output templates
-├── CLAUDE.md              # This file
-├── README.md              # Documentation
-└── LICENSE                # MIT
+│   └── plugin.json         # Plugin metadata
+├── skills/                  # Each skill = one /arc:* command
+│   ├── vision/SKILL.md     # /arc:vision
+│   ├── ideate/SKILL.md     # /arc:ideate
+│   ├── detail/SKILL.md     # /arc:detail
+│   ├── implement/SKILL.md  # /arc:implement
+│   ├── design/SKILL.md     # /arc:design
+│   ├── figma/SKILL.md      # /arc:figma
+│   ├── build/SKILL.md      # /arc:build
+│   ├── test/SKILL.md       # /arc:test
+│   ├── letsgo/SKILL.md     # /arc:letsgo
+│   ├── deslop/SKILL.md     # /arc:deslop
+│   ├── review/SKILL.md     # /arc:review
+│   ├── tasklist/SKILL.md   # /arc:tasklist
+│   ├── document/SKILL.md   # /arc:document
+│   ├── suggest/SKILL.md    # /arc:suggest
+│   └── commit/SKILL.md     # /arc:commit
+├── agents/                  # Specialized reviewers
+│   ├── review/
+│   ├── research/
+│   ├── design/
+│   └── workflow/
+├── disciplines/             # Implementation methodologies
+├── references/              # Domain knowledge
+├── templates/               # Output templates
+├── CLAUDE.md                # This file
+├── README.md                # Documentation
+└── LICENSE                  # MIT
 ```
 
 ## Command Hierarchy
@@ -56,7 +53,7 @@ TOOLS   /arc:commit     - Smart commit + push
 ## Development
 
 To test changes locally:
-1. Edit workflows in `skills/arc/workflows/`
+1. Edit the skill in `skills/<command>/SKILL.md`
 2. Run the corresponding command (e.g., `/arc:ideate`)
 3. Iterate based on results
 
@@ -75,7 +72,7 @@ Arc focuses on the development lifecycle. For specialized domains, consider thes
 - **[agent-skills](https://github.com/vercel-labs/agent-skills)** — `vercel-react-best-practices` skill for React/Next.js performance patterns
 - **[web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines)** — `web-design-guidelines` skill for UI compliance review
 
-**When installed, Arc workflows will suggest these skills:**
+**When installed, Arc commands will suggest these skills:**
 | Arc Command | Complementary Skill | Use Case |
 |-------------|-------------------|----------|
 | `/arc:design` | `web-design-guidelines` | UI compliance review |
@@ -85,6 +82,6 @@ Arc focuses on the development lifecycle. For specialized domains, consider thes
 
 ## Publishing
 
-1. Bump version in `.claude-plugin/manifest.json`
+1. Bump version in `.claude-plugin/plugin.json`
 2. Commit and push to GitHub
 3. Users update via `claude plugins update`

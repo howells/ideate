@@ -1,6 +1,6 @@
 ---
-description: UI design and redesign workflow
-references: references/ascii-ui-patterns.md, references/frontend-design.md
+name: design
+description: Create distinctive, non-generic UI designs. Establishes aesthetic direction, creates ASCII wireframes, and avoids AI slop patterns.
 ---
 
 # Design Workflow
@@ -61,8 +61,8 @@ Ask: "Does this layout feel right?"
 ### Step 5: Build or Hand Off
 
 Options:
-1. **Build now** → Use /arc:build or /implement
-2. **Create plan** → Invoke detail workflow
+1. **Build now** → Use /arc:build or /arc:implement
+2. **Create plan** → Invoke /arc:detail
 3. **Just the design** → Save to docs/plans/ and stop
 
 ### Anti-Patterns to Avoid
@@ -87,7 +87,7 @@ This provides external validation against established UI best practices.
 
 ## Interop
 
-- Can invoke **/build** for quick implementation
-- Can invoke **/implement** for planned implementation
+- Can invoke **/arc:build** for quick implementation
+- Can invoke **/arc:implement** for planned implementation
 - Aesthetic direction feeds into implementation tasks
 - Can invoke **web-design-guidelines** skill for compliance review (if available)

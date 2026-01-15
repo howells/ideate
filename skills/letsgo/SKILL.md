@@ -1,5 +1,6 @@
 ---
-description: Production readiness checklist
+name: letsgo
+description: Production readiness checklist. Covers domains, Vercel config, SEO, meta, security, and everything needed to ship.
 ---
 
 # Letsgo Workflow
@@ -113,8 +114,8 @@ This handles the deployment workflow with proper verification.
 
 ## Interop
 
-- Runs **/test** as part of quality check
-- Runs **/deslop** as part of quality check
-- References **/vision** to verify alignment
+- Runs **/arc:test** as part of quality check
+- Runs **/arc:deslop** as part of quality check
+- References **/arc:vision** to verify alignment
 - Can invoke **vercel-react-best-practices** skill for performance review (if available)
 - Can invoke **vercel:deploy** skill for deployment (if available)

@@ -1,6 +1,6 @@
 ---
-description: Create or review the high-level vision document
-outputs: docs/vision.md
+name: vision
+description: Create or review a high-level vision document (500-700 words) that captures project goals and purpose.
 ---
 
 # Vision Workflow

@@ -1,3 +1,8 @@
+---
+name: ideate
+description: Turn ideas into validated designs through collaborative dialogue with built-in expert review. Use when you have a concept and want a clear technical approach before implementation.
+---
+
 <required_reading>
 **Read these reference files NOW:**
 1. references/design-phases.md
@@ -285,8 +290,8 @@ Before implementation, set up an isolated workspace. Follow `disciplines/using-g
 ```
 
 Options:
-1. **Set up worktree and continue** (Recommended) → Follow `disciplines/using-git-worktrees.md`, then route to `workflows/detail.md`
-2. **Skip worktree, just plan** → Route to `workflows/detail.md` directly
+1. **Set up worktree and continue** (Recommended) → Follow `disciplines/using-git-worktrees.md`, then route to `/arc:detail`
+2. **Skip worktree, just plan** → Route to `/arc:detail` directly
 3. **Done for now** → Just the design
 
 **If setting up worktree:**

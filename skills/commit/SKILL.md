@@ -1,10 +1,15 @@
+---
+name: commit
+description: Smart commit and push with auto-splitting. Intelligently groups changes into separate commits when spanning multiple domains.
+---
+
 # Commit Changes
 
 Commit and push changes, intelligently splitting into separate commits when changes span multiple domains.
 
 Usage:
 - `/arc:commit` - Auto-analyze and commit (may create multiple commits)
-- `/commit [message]` - Single commit with provided message
+- `/arc:commit [message]` - Single commit with provided message
 
 $ARGUMENTS will contain the optional commit message.
 

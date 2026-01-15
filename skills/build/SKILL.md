@@ -1,6 +1,6 @@
 ---
-description: Quick build without formal planning
-uses: disciplines/test-driven-development.md, disciplines/verification-before-completion.md
+name: build
+description: Quick build for small-to-medium scope work without formal planning. Still uses TDD and verification disciplines.
 ---
 
 # Build Workflow
@@ -88,10 +88,10 @@ Only then claim completion.
 If e2e tests exist for the changed code:
 
 ```
-Task e2e-test-runner model: sonnet: "Run e2e tests and fix any failures"
+Task Bash run_in_background: true: "Run e2e tests and report any failures"
 ```
 
-Spawning a separate agent keeps verbose e2e output from filling context.
+Spawning a background task keeps verbose e2e output from filling context.
 
 ### Step 5b: React/Next.js Performance Check (Optional)
 

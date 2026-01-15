@@ -1,3 +1,8 @@
+---
+name: implement
+description: Execute an implementation plan task-by-task with TDD. Reads plan from docs/plans/, creates todos, and builds in batches with continuous quality checks.
+---
+
 <required_reading>
 **Read these reference files NOW:**
 1. references/testing-patterns.md
@@ -94,7 +99,7 @@ pnpm biome check --write .
 **If test doesn't pass after implementation:**
 Spawn debugger agent immediately:
 ```
-Task debugging-toolkit:debugger model: sonnet: "Test failing unexpectedly.
+Task general-purpose model: sonnet: "Test failing unexpectedly.
 Test file: [path]
 Test name: [name]
 Error: [error message]
@@ -167,7 +172,7 @@ mcp__figma__get_screenshot: fileKey, nodeId
 **After completing ALL UI tasks — INVOKE FRONTEND-DESIGN FOR REVIEW:**
 
 ```
-Task compound-engineering:frontend-design model: opus: "Review the completed UI implementation.
+Task general-purpose model: opus: "Review the completed UI implementation.
 
 Aesthetic Direction (from design doc):
 - Tone: [tone]
@@ -233,7 +238,7 @@ If e2e tests were created as part of this implementation:
 
 **Spawn dedicated agent to run and fix e2e tests:**
 ```
-Task e2e-test-runner model: sonnet: "Run e2e tests for the feature we just implemented. Fix any failures and iterate until all pass."
+Task Bash run_in_background: true: "Run e2e tests for the feature we just implemented. Fix any failures and iterate until all pass."
 ```
 
 **Why a separate agent?**

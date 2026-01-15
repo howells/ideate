@@ -1,12 +1,11 @@
 ---
-description: Test strategy and execution
-references: references/testing-patterns.md
-uses: disciplines/test-driven-development.md
+name: test
+description: Test strategy and execution. Create test plans, run test suites, or fix failing tests. Supports vitest, playwright, jest, and cypress.
 ---
 
 # Test Workflow
 
-Create or review test strategy. Optionally run test suite. Skews vitest and playwright.
+Create or review test strategy. Optionally run test suite. Supports vitest and playwright primarily.
 
 ## Process
 
@@ -78,16 +77,39 @@ Output test plan:
 
 ### For "Run Tests"
 
+**Determine test type from context or ask:**
+- Unit/Integration tests → Run inline
+- E2E tests → Run as background agent (prevents terminal crashes)
+
+**Unit/Integration (vitest/jest) — Run inline:**
 ```bash
 # Vitest
 pnpm vitest run
 
-# Playwright
-pnpm playwright test
-
 # With coverage
 pnpm vitest run --coverage
 ```
+
+**E2E tests (playwright/cypress) — Run as background agent:**
+```
+Task Bash run_in_background: true: "Run playwright e2e tests and report results.
+
+Commands:
+pnpm playwright test
+
+If tests fail, capture:
+- Which tests failed
+- Error messages
+- Screenshot paths (if any)
+
+Report summary when complete."
+```
+
+**Why background agent for E2E:**
+- Playwright spawns browsers which can consume significant resources
+- If tests hang or crash, your main session continues
+- Verbose trace output doesn't fill your context
+- You can continue working while tests run
 
 Report results. If failures, offer to debug.
 

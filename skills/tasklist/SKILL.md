@@ -1,6 +1,6 @@
 ---
-description: Persistent task backlog management
-outputs: docs/tasklist.md
+name: tasklist
+description: Persistent task backlog that survives across sessions. Git-committed, always available.
 ---
 
 # Tasklist Workflow

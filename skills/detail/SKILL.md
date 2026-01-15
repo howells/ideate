@@ -1,3 +1,8 @@
+---
+name: detail
+description: Create a detailed implementation plan with exact file paths, test code, and TDD cycles. Turns a design into executable tasks.
+---
+
 <required_reading>
 **Read these reference files NOW:**
 1. references/testing-patterns.md
@@ -50,7 +55,7 @@ Extract:
 **Spawn agents to find existing code to leverage:**
 
 ```
-Task code-explorer: "Find existing patterns in this codebase that we can
+Task Explore: "Find existing patterns in this codebase that we can
 reuse for: [list components/features from design].
 Look for: similar components, utility functions, hooks, types, test patterns.
 
@@ -72,7 +77,7 @@ file organization, and architectural patterns should new code follow?"
 
 **If using unfamiliar libraries/APIs:**
 ```
-Task framework-docs-researcher: "Gather documentation and best practices for
+Task general-purpose: "Gather documentation and best practices for
 [library name] focusing on [specific feature needed]."
 ```
 
@@ -177,13 +182,13 @@ Figma Reference:
   mcp__figma__get_design_context: fileKey="xxx", nodeId="123:456"
 
 ASCII Wireframe (from design):
-┌─────────────┐
-│   [image]   │
-├─────────────┤
-│ Product Name│
-│ $99.00      │
-│ [Add to Cart]│  ← hover lift + shadow bloom
-└─────────────┘
+┌─────────────────┐
+│   [image]       │
+├─────────────────┤
+│ Product Name    │
+│ $99.00          │
+│ [Add to Cart]   │  ← hover lift + shadow bloom
+└─────────────────┘
 
 Implementation Notes:
 - AVOID: Inter/Roboto, purple gradients, generic shadows
@@ -207,7 +212,7 @@ Files:
 ```markdown
 # [Feature Name] Implementation Plan
 
-> **For Claude:** Use ideate:execute to implement this plan task-by-task.
+> **For Claude:** Use /arc:implement to implement this plan task-by-task.
 
 **Design:** [Link to design doc]
 **Goal:** [One sentence]
@@ -239,8 +244,8 @@ git branch --show-current
 ```
 
 Options:
-1. **Set up worktree and execute** (Recommended) → Follow `disciplines/using-git-worktrees.md`, then route to `workflows/implement.md`
-2. **Execute on current branch** → Route to `workflows/implement.md` directly
+1. **Set up worktree and execute** (Recommended) → Follow `disciplines/using-git-worktrees.md`, then route to `/arc:implement`
+2. **Execute on current branch** → Route to `/arc:implement` directly
 3. **Review plan first** → Open for user review, then decide
 4. **Done for now** → End session
 
@@ -250,7 +255,7 @@ Options:
 ```
 
 Options:
-1. **Execute now** → Route to `workflows/implement.md`
+1. **Execute now** → Route to `/arc:implement`
 2. **Review plan first** → Open for user review
 3. **Done for now** → End session
 </process>

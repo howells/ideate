@@ -1,7 +1,6 @@
 ---
-description: Opinionated suggestions for what to work on next
-reads: docs/tasklist.md, docs/vision.md, codebase
-uses: agents/review/*
+name: suggest
+description: Opinionated recommendations for what to work on next. Analyzes tasklist, codebase, and vision to suggest priorities.
 ---
 
 # Suggest Workflow
@@ -90,7 +89,7 @@ If user picks one, invoke the relevant command.
 
 ## What Suggest is NOT
 
-- Not a code review (use /arc:deslop or expert-review)
+- Not a code review (use /arc:deslop or /arc:review)
 - Not a test runner (use /arc:test)
 - Not a planner (use /arc:ideate)
 

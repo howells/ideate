@@ -1,3 +1,8 @@
+---
+name: document
+description: Capture solved problems as searchable documentation. Builds institutional knowledge that informs future design sessions.
+---
+
 <required_reading>
 **Read these reference files NOW:**
 - references/solution-schema.md
@@ -16,7 +21,7 @@ Capture solved problems as searchable documentation immediately after confirmati
 - "problem solved"
 - "that did it"
 
-**Manual:** `/compound` command
+**Manual:** `/arc:document` command
 
 **Only for non-trivial problems:**
 - Multiple investigation attempts needed
@@ -142,7 +147,7 @@ What's next?
 **The Knowledge Loop:**
 
 ```
-ideate (design) → implement → encounter problem → solve → /compound (document)
+ideate (design) → implement → encounter problem → solve → /arc:document (document)
                                                               ↓
                                          informs future ideate sessions
 ```

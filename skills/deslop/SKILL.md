@@ -1,5 +1,6 @@
 ---
-description: Remove LLM-generated artifacts
+name: deslop
+description: Remove LLM-generated artifacts from code. Cleans unnecessary comments, defensive checks, type escapes, and style inconsistencies.
 ---
 
 # Deslop Workflow
