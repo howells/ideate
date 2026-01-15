@@ -77,6 +77,26 @@ Arc uses these plugins for enhanced functionality:
 
 Arc works without these, but relevant features will be limited.
 
+### Optional: Vercel Labs Plugins
+
+These plugins provide additional review capabilities:
+
+| Plugin | Skill | Used by |
+|--------|-------|---------|
+| **[agent-skills](https://github.com/vercel-labs/agent-skills)** | `vercel-react-best-practices` | `/arc:implement`, `/arc:build`, `/arc:letsgo` |
+| **[web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines)** | `web-design-guidelines` | `/arc:design`, `/arc:implement` |
+
+```
+# Vercel Labs plugins (optional)
+/plugin marketplace add vercel-labs/agent-skills
+/plugin install agent-skills@vercel-labs-agent-skills
+
+/plugin marketplace add vercel-labs/web-interface-guidelines
+/plugin install web-interface-guidelines@vercel-labs-web-interface-guidelines
+```
+
+When installed, Arc commands will automatically use these skills for React/Next.js performance reviews and UI compliance checks.
+
 ## Getting Started
 
 If you're new to Claude Code, here's how Arc works:

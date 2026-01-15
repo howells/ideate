@@ -135,10 +135,10 @@ Wait for user confirmation or adjustments.
 - Spawn data-integrity-guardian for quick review
 - Present findings as questions
 
-**Before starting UI tasks — INVOKE FRONTEND-DESIGN FOR BUILD:**
+**Before starting UI tasks — INVOKE ARC:DESIGN FOR BUILD:**
 
 ```
-Skill frontend-design: "Build UI components for [feature].
+Skill arc:design: "Build UI components for [feature].
 
 Aesthetic Direction (from design doc):
 - Tone: [tone]
@@ -169,7 +169,7 @@ mcp__figma__get_screenshot: fileKey, nodeId
 - [ ] Is the memorable element actually memorable?
 - [ ] Did I avoid Inter/Roboto/Arial and purple gradients?
 
-**After completing ALL UI tasks — INVOKE FRONTEND-DESIGN FOR REVIEW:**
+**After completing ALL UI tasks — INVOKE ARC:DESIGN FOR REVIEW:**
 
 ```
 Task general-purpose model: opus: "Review the completed UI implementation.
