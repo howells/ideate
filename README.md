@@ -176,7 +176,7 @@ Arc includes 14 specialized agents:
 
 ## Disciplines
 
-Implementation methodologies in `skills/arc/disciplines/`:
+Implementation methodologies in `disciplines/`:
 
 - **test-driven-development** — Red-green-refactor cycle
 - **systematic-debugging** — Methodical bug investigation
