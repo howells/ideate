@@ -26,22 +26,22 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Get current version
+          # Get current version from plugin.json (source of truth)
           PLUGIN_JSON=".claude-plugin/plugin.json"
           MARKETPLACE_JSON=".claude-plugin/marketplace.json"
           PACKAGE_JSON="package.json"
 
-          current_version=$(grep -o '"version": "[^"]*"' "$PLUGIN_JSON" | head -1 | cut -d'"' -f4)
+          current_version=$(jq -r '.version' "$PLUGIN_JSON")
 
           # Parse and bump patch version
           IFS='.' read -r major minor patch <<< "$current_version"
           new_patch=$((patch + 1))
           new_version="$major.$minor.$new_patch"
 
-          # Update version files
-          sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$PLUGIN_JSON"
-          sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/g" "$MARKETPLACE_JSON"
-          sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$PACKAGE_JSON"
+          # Update version files using jq (doesn't depend on current value)
+          jq --arg v "$new_version" '.version = $v' "$PLUGIN_JSON" > tmp.json && mv tmp.json "$PLUGIN_JSON"
+          jq --arg v "$new_version" '.metadata.version = $v | .plugins[0].version = $v' "$MARKETPLACE_JSON" > tmp.json && mv tmp.json "$MARKETPLACE_JSON"
+          jq --arg v "$new_version" '.version = $v' "$PACKAGE_JSON" > tmp.json && mv tmp.json "$PACKAGE_JSON"
 
           # Commit version bump
           git add "$PLUGIN_JSON" "$MARKETPLACE_JSON" "$PACKAGE_JSON"
