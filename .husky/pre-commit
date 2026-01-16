@@ -1,33 +1,6 @@
 #!/bin/sh
 
-# Validate plugin structure first
+# Validate plugin structure before commit
+# Version bumping and releases are handled by GitHub Actions
+
 .husky/validate-plugin.sh || exit 1
-
-# Auto-bump plugin version on every commit
-# This ensures Claude Code re-indexes commands after plugin updates
-
-PLUGIN_JSON=".claude-plugin/plugin.json"
-MARKETPLACE_JSON=".claude-plugin/marketplace.json"
-PACKAGE_JSON="package.json"
-
-# Get current version from plugin.json
-current_version=$(grep -o '"version": "[^"]*"' "$PLUGIN_JSON" | head -1 | cut -d'"' -f4)
-
-# Parse and bump patch version
-IFS='.' read -r major minor patch <<< "$current_version"
-new_patch=$((patch + 1))
-new_version="$major.$minor.$new_patch"
-
-# Update plugin.json
-sed -i '' "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$PLUGIN_JSON"
-
-# Update marketplace.json (has two version fields)
-sed -i '' "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/g" "$MARKETPLACE_JSON"
-
-# Update package.json
-sed -i '' "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$PACKAGE_JSON"
-
-# Stage the updated files
-git add "$PLUGIN_JSON" "$MARKETPLACE_JSON" "$PACKAGE_JSON"
-
-echo "📦 Auto-bumped version: $current_version → $new_version"
