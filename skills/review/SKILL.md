@@ -64,17 +64,17 @@ ls .ruler/ 2>/dev/null || grep -l "@materia/" src/**/*.ts 2>/dev/null && echo "d
 **Select reviewers based on project type:**
 
 **Daniel's projects:**
-- ${CLAUDE_PLUGIN_ROOT}/agents/review/daniel-reviewer.md
+- ${CLAUDE_PLUGIN_ROOT}/agents/review/daniel-product-engineer-reviewer.md
 - ${CLAUDE_PLUGIN_ROOT}/agents/review/code-simplicity-reviewer.md
 
 **TypeScript/React:**
-- ${CLAUDE_PLUGIN_ROOT}/agents/review/daniel-reviewer.md
+- ${CLAUDE_PLUGIN_ROOT}/agents/review/daniel-product-engineer-reviewer.md
 - ${CLAUDE_PLUGIN_ROOT}/agents/review/senior-reviewer.md
 - ${CLAUDE_PLUGIN_ROOT}/agents/review/architecture-strategist.md
 
 **Next.js:**
 - ${CLAUDE_PLUGIN_ROOT}/agents/review/lee-nextjs-reviewer.md
-- ${CLAUDE_PLUGIN_ROOT}/agents/review/daniel-reviewer.md
+- ${CLAUDE_PLUGIN_ROOT}/agents/review/daniel-product-engineer-reviewer.md
 - ${CLAUDE_PLUGIN_ROOT}/agents/review/senior-reviewer.md
 
 **Python:**
@@ -179,6 +179,23 @@ If reviewed an **implementation plan**:
 
 </process>
 
+<progress_append>
+After completing the review, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:review
+**Task:** Review [plan name]
+**Outcome:** Complete
+**Files:** [Plan file if updated]
+**Decisions:**
+- [Key change 1]
+- [Key change 2]
+**Next:** /arc:implement or done
+
+---
+```
+</progress_append>
+
 <success_criteria>
 Review is complete when:
 - [ ] Plan located (conversation, file, or user-provided)
@@ -190,4 +207,5 @@ Review is complete when:
 - [ ] Summary presented
 - [ ] Remaining arc shown (based on plan type)
 - [ ] User chose next step (detail/implement or done)
+- [ ] Progress journal updated
 </success_criteria>

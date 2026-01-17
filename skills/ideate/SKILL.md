@@ -14,11 +14,13 @@ description: Turn ideas into validated designs through collaborative dialogue wi
 <process>
 ## Phase 1: Context Gathering
 
-**Search episodic memory for past decisions:**
-```
-Task episodic-memory:search-conversations model: haiku: "Search for past conversations
-about [topic/feature]. Look for: previous design decisions, rejected
-approaches, lessons learned, related features."
+**Read progress journal and solutions for past decisions:**
+```bash
+# Recent progress
+head -50 docs/progress.md 2>/dev/null
+
+# Past solutions that might be relevant
+ls docs/solutions/**/*.md 2>/dev/null | head -10
 ```
 
 **Spawn Explore agent for codebase understanding (in parallel):**
@@ -326,6 +328,24 @@ I recommend setting up a worktree first so the implementation plan lives with yo
 - Implementation plan will be created on current branch
 </process>
 
+<progress_append>
+After completing the design, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:ideate
+**Task:** [Feature name/description]
+**Outcome:** Complete
+**Files:** docs/plans/YYYY-MM-DD-[topic]-design.md
+**Decisions:**
+- Approach: [chosen approach]
+- [Key decision 1]
+- [Key decision 2]
+**Next:** /arc:detail or /arc:implement
+
+---
+```
+</progress_append>
+
 <success_criteria>
 Design is complete when:
 - [ ] User's idea is fully understood (no ambiguity)
@@ -336,4 +356,5 @@ Design is complete when:
 - [ ] Design document written and committed to main
 - [ ] Full arc presented (ideate → worktree → detail → review → implement)
 - [ ] User chose next step (worktree setup, direct to detail, or done)
+- [ ] Progress journal updated
 </success_criteria>

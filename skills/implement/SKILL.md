@@ -359,6 +359,30 @@ git worktree remove .worktrees/<feature-name>
 **Don't guess. Ask.**
 </when_to_stop>
 
+<progress_context>
+**Read progress journal for context:**
+```bash
+head -50 docs/progress.md 2>/dev/null
+```
+Look for related ideate/detail sessions and any prior implementation attempts.
+</progress_context>
+
+<progress_append>
+After completing implementation (or pausing), append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:implement
+**Task:** [Feature name]
+**Outcome:** [Complete / In Progress (X/Y tasks) / Blocked]
+**Files:** [Key files created/modified]
+**Decisions:**
+- [Key implementation decision]
+**Next:** [PR created / Continue tomorrow / Blocked on X]
+
+---
+```
+</progress_append>
+
 <success_criteria>
 Execution is complete when:
 - [ ] All tasks marked completed in TodoWrite
@@ -366,4 +390,5 @@ Execution is complete when:
 - [ ] Linting passes
 - [ ] PR created
 - [ ] User informed of completion
+- [ ] Progress journal updated
 </success_criteria>

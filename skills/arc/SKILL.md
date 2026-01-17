@@ -26,10 +26,9 @@ Keep it brief — 5-10 bullet points max."
 ls docs/vision.md docs/tasklist.md docs/plans/*.md 2>/dev/null | head -10
 ```
 
-**Search memory for recent work:**
-```
-Task episodic-memory:search-conversations model: haiku: "Search for recent conversations
-about this project. Look for: what was worked on, any open items, recent decisions."
+**Read progress journal for recent work:**
+```bash
+head -50 docs/progress.md 2>/dev/null
 ```
 
 ### Step 2: Present Context
@@ -37,7 +36,7 @@ about this project. Look for: what was worked on, any open items, recent decisio
 Briefly share what you found:
 - Project type and key patterns
 - Any existing plans or tasks
-- Recent work from memory (if found)
+- Recent work from progress journal (if found)
 
 ### Step 3: Ask What They Want to Do
 
@@ -88,5 +87,5 @@ Skill arc:[chosen]: "[user's description]"
 ## Interop
 
 - Routes to all other /arc:* commands
-- Reads /arc:tasklist, /arc:vision for context
+- Reads /arc:tasklist, /arc:vision, /arc:progress for context
 - Uses /arc:suggest when user is unsure

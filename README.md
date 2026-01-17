@@ -11,7 +11,7 @@ The full arc from idea to shipped code. A [Claude Code](https://docs.anthropic.c
 
 ## What It Does
 
-Arc provides 15 commands covering the complete development lifecycle:
+Arc provides 17 commands covering the complete development lifecycle:
 
 ```
 WHY     /arc:vision     - High-level goals (500-700 words)
@@ -29,6 +29,8 @@ DO      /arc:implement  - Execute the plan with TDD
 
 CROSS-CUTTING
         /arc:review     - Review a plan for feasibility
+        /arc:audit      - Comprehensive codebase audit
+        /arc:progress   - Session journal for knowledge persistence
         /arc:tasklist   - Persistent task backlog
         /arc:document   - Feature documentation
         /arc:suggest    - Opinionated next-step recommendations
@@ -60,7 +62,6 @@ Arc uses these plugins for enhanced functionality:
 |--------|---------|
 | **Figma** | `/arc:ideate`, `/arc:detail`, `/arc:figma` |
 | **Context7** | `/arc:implement` |
-| **Episodic Memory** | `/arc:ideate`, `/arc:document` |
 | **Chrome** | `figma-implement` agent |
 
 ```
@@ -68,14 +69,12 @@ Arc uses these plugins for enhanced functionality:
 /plugin install figma@claude-plugins-official
 /plugin install context7@claude-plugins-official
 
-# Episodic memory (requires superpowers marketplace)
-/plugin marketplace add obra/superpowers-marketplace
-/plugin install episodic-memory@superpowers-marketplace
-
 # Chrome extension: https://chromewebstore.google.com/detail/claude-in-chrome/
 ```
 
 Arc works without these, but relevant features will be limited.
+
+**Note:** Arc maintains its own progress journal (`docs/progress.md`) for knowledge persistence across sessions, replacing the need for external memory plugins.
 
 ### Optional: Vercel Labs Plugins
 
@@ -178,6 +177,8 @@ Each step asks if you want to continue. You can also enter at any point:
 | `/arc:letsgo` | Ship to production | Deployment |
 | `/arc:deslop` | Clean LLM artifacts | Code cleanup |
 | `/arc:review` | Review a plan for feasibility | Updated plan file |
+| `/arc:audit` | Comprehensive codebase audit | `docs/audits/YYYY-MM-DD-*.md` |
+| `/arc:progress` | View/manage session journal | `docs/progress.md` |
 | `/arc:tasklist` | Manage backlog | `docs/tasklist.md` |
 | `/arc:document` | Document features | `docs/features/<feature>.md` |
 | `/arc:suggest` | What to work on next | Recommendations |
@@ -190,7 +191,7 @@ Arc includes 14 specialized agents:
 | Category | Agents |
 |----------|--------|
 | **Research** | framework-docs-researcher, git-history-analyzer, duplicate-detector |
-| **Review** | architecture-strategist, code-simplicity-reviewer, daniel-reviewer, data-integrity-guardian, lee-nextjs-reviewer, performance-oracle, security-sentinel, senior-reviewer |
+| **Review** | architecture-strategist, code-simplicity-reviewer, daniel-product-engineer-reviewer, data-integrity-guardian, lee-nextjs-reviewer, performance-oracle, security-sentinel, senior-reviewer |
 | **Design** | figma-implement |
 | **Workflow** | spec-flow-analyzer, e2e-test-runner |
 

@@ -126,6 +126,23 @@ Focus on: [specific areas of concern]"
 
 This provides external validation against established UI best practices.
 
+<progress_append>
+After completing the design work, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:design
+**Task:** [UI/component designed]
+**Outcome:** Complete
+**Files:** [Design doc or component files]
+**Decisions:**
+- Tone: [aesthetic direction]
+- Memorable: [key element]
+**Next:** /arc:build or /arc:implement
+
+---
+```
+</progress_append>
+
 ## Interop
 
 - Can invoke **/arc:build** for quick implementation

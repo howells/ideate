@@ -129,6 +129,22 @@ Tell the user:
 - Summary of each commit (hash, message)
 - Push status
 
+<progress_append>
+After committing changes, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:commit
+**Task:** Commit changes
+**Outcome:** Complete
+**Files:** [N] commits created
+**Decisions:**
+- [commit message summaries]
+**Next:** Continue working
+
+---
+```
+</progress_append>
+
 ## Failure Scenarios
 
 If you cannot fix an error properly:

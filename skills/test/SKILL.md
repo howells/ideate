@@ -147,3 +147,19 @@ From `${CLAUDE_PLUGIN_ROOT}/references/testing-patterns.md`:
 - Testing mock behavior
 - Vague names ("test1", "it works")
 - Implementation details in assertions
+
+<progress_append>
+After running tests or creating strategy, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:test
+**Task:** [Run tests / Create strategy / Fix failing]
+**Outcome:** [Complete / X tests passing / Y failing]
+**Files:** [Test files if created/modified]
+**Decisions:**
+- [Coverage gaps identified]
+**Next:** [Fix failures / Continue]
+
+---
+```
+</progress_append>

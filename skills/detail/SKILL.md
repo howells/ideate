@@ -278,6 +278,31 @@ Options:
 3. **Done for now** — End session
 </process>
 
+<progress_context>
+**Read progress journal for context:**
+```bash
+head -50 docs/progress.md 2>/dev/null
+```
+Look for related ideate sessions or prior work on this feature.
+</progress_context>
+
+<progress_append>
+After creating the implementation plan, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:detail
+**Task:** Implementation plan for [feature]
+**Outcome:** Complete
+**Files:** docs/plans/YYYY-MM-DD-[topic]-implementation.md
+**Decisions:**
+- Tasks: [N] TDD cycles
+- Stack: [framework + test runner]
+**Next:** /arc:review or /arc:implement
+
+---
+```
+</progress_append>
+
 <success_criteria>
 Implementation plan is complete when:
 - [ ] Test framework detected
@@ -290,4 +315,5 @@ Implementation plan is complete when:
 - [ ] Plan committed to git (in worktree if set up)
 - [ ] Remaining arc shown (review → implement)
 - [ ] User chose next step (review, implement, or done)
+- [ ] Progress journal updated
 </success_criteria>

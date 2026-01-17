@@ -89,6 +89,22 @@ Cleaned [N] files:
 [1-3 sentence summary]
 ```
 
+<progress_append>
+After cleaning the codebase, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:deslop
+**Task:** Clean [scope]
+**Outcome:** Complete
+**Files:** [N] files cleaned
+**Decisions:**
+- Removed: [X] comments, [Y] checks, [Z] escapes
+**Next:** Continue working
+
+---
+```
+</progress_append>
+
 ## What Deslop Does NOT Do
 
 - Add new functionality

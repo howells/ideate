@@ -152,8 +152,25 @@ ideate (design) → implement → encounter problem → solve → /arc:document 
                                          informs future ideate sessions
 ```
 
-When starting new ideate sessions, episodic-memory search includes `docs/solutions/` to surface past learnings.
+When starting new ideate sessions, the progress journal and `docs/solutions/` are read to surface past learnings and context.
 </integration>
+
+<progress_append>
+After documenting a solution, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:document
+**Task:** Documented solution for [problem summary]
+**Outcome:** Complete
+**Files:** docs/solutions/[category]/[filename].md
+**Decisions:**
+- Problem type: [category]
+- Severity: [level]
+**Next:** Continue working
+
+---
+```
+</progress_append>
 
 <success_criteria>
 - [ ] YAML frontmatter complete (date, type, severity, tags)

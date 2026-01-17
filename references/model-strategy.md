@@ -7,7 +7,6 @@
 | Task Type | Model | Why |
 |-----------|-------|-----|
 | Explore codebase | haiku | Pattern matching, file finding |
-| Search memory | haiku | Simple retrieval |
 | Git history analysis | haiku | Mechanical parsing |
 | Gather docs | haiku | Fetch and summarize |
 | Run TS/lint checks | haiku | Mechanical error fixing |

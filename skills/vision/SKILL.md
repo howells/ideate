@@ -72,6 +72,22 @@ git add docs/vision.md
 git commit -m "docs: add project vision"
 ```
 
+<progress_append>
+After creating or updating the vision, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:vision
+**Task:** [Create / Update] vision document
+**Outcome:** Complete
+**Files:** docs/vision.md
+**Decisions:**
+- Purpose: [one-liner]
+**Next:** /arc:ideate or continue
+
+---
+```
+</progress_append>
+
 ## Interop
 
 - **/arc:ideate** reads vision for context

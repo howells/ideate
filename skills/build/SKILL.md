@@ -131,6 +131,30 @@ Skill vercel-react-best-practices: "Quick review of [component/feature] for perf
 3. Add follow-up items to /arc:tasklist
 4. Done for now
 
+<progress_context>
+**Read progress journal for context:**
+```bash
+head -50 docs/progress.md 2>/dev/null
+```
+Check for related prior work.
+</progress_context>
+
+<progress_append>
+After completing the build, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:build
+**Task:** [What was built]
+**Outcome:** Complete
+**Files:** [Key files created/modified]
+**Decisions:**
+- [Key decision if any]
+**Next:** Continue working
+
+---
+```
+</progress_append>
+
 ## What Build is NOT
 
 - Not for large features (use /arc:ideate)

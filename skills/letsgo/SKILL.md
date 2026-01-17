@@ -112,6 +112,22 @@ Skill vercel:deploy
 ```
 This handles the deployment workflow with proper verification.
 
+<progress_append>
+After completing deployment or checklist, append to progress journal:
+
+```markdown
+## YYYY-MM-DD HH:MM — /arc:letsgo
+**Task:** Production readiness for [project/feature]
+**Outcome:** [Deployed / Checklist complete / Blocked]
+**Files:** [Config files modified]
+**Decisions:**
+- [Key production decisions]
+**Next:** [Live at URL / Fix blockers]
+
+---
+```
+</progress_append>
+
 ## Interop
 
 - Runs **/arc:test** as part of quality check
