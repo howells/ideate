@@ -38,6 +38,18 @@ Rules are optional — proceed without them if the user prefers.
 </rules_context>
 
 <process>
+
+**You are here in the arc:**
+```
+/arc:ideate     → Design doc (on main) ✓
+     ↓
+/arc:detail     → Implementation plan ✓
+     ↓
+/arc:review     → Review (optional) ✓
+     ↓
+/arc:implement  → Execute task-by-task ← YOU ARE HERE
+```
+
 ## Phase 1: Setup
 
 **If not already in worktree:**

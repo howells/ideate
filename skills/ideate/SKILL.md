@@ -282,30 +282,48 @@ git add docs/plans/
 git commit -m "docs: add <topic> design plan"
 ```
 
-**Implementation handoff:**
-
-Before implementation, set up an isolated workspace. Follow `${CLAUDE_PLUGIN_ROOT}/disciplines/using-git-worktrees.md`:
+**What's next — the full arc:**
 
 ```
-"Design ready! I recommend creating a feature branch and worktree to keep main clean and allow easy rollback."
+/arc:ideate     → Design doc (on main) ✓ YOU ARE HERE
+     ↓
+[Create worktree for feature branch]
+     ↓
+/arc:detail     → Implementation plan (in worktree)
+     ↓
+/arc:review     → Review implementation plan (optional)
+     ↓
+/arc:implement  → Execute task-by-task
 ```
 
-Options:
-1. **Set up worktree and continue** (Recommended) → Follow `${CLAUDE_PLUGIN_ROOT}/disciplines/using-git-worktrees.md`, then route to `/arc:detail`
-2. **Skip worktree, just plan** → Route to `/arc:detail` directly
-3. **Done for now** → Just the design
+**Why this order:**
+- Design doc stays on main — it's the canonical "what we're building"
+- Implementation plan lives in the worktree — it's large and specific to this work
+- Review catches issues before you start coding
 
-**If setting up worktree:**
-1. Follow the directory selection process in `${CLAUDE_PLUGIN_ROOT}/disciplines/using-git-worktrees.md`
+**Present to user:**
+```
+"Design committed to main. Ready to continue?
+
+The next step is creating a detailed implementation plan with exact file paths and TDD tasks.
+I recommend setting up a worktree first so the implementation plan lives with your feature branch."
+```
+
+**Options:**
+1. **Set up worktree → create implementation plan** (Recommended)
+2. **Create implementation plan on current branch** (skip worktree)
+3. **Done for now** — just the design
+
+**If setting up worktree (option 1):**
+1. Follow `${CLAUDE_PLUGIN_ROOT}/disciplines/using-git-worktrees.md`
 2. Create branch: `feature/<topic-slug>`
 3. Run project setup (auto-detect from package.json, Cargo.toml, etc.)
 4. Verify clean baseline (tests pass)
-5. Then proceed to implementation planning
+5. Route to `/arc:detail` to create implementation plan
 
-If creating implementation plan:
-- Detect test frameworks (vitest, playwright, jest, etc.)
-- Create bite-sized TDD tasks
-- Save to `docs/plans/YYYY-MM-DD-<topic>-implementation.md`
+**If skipping worktree (option 2):**
+- Route to `/arc:detail` directly
+- Implementation plan will be created on current branch
 </process>
 
 <success_criteria>
@@ -315,6 +333,7 @@ Design is complete when:
 - [ ] ASCII UI wireframes created (if UI involved)
 - [ ] Design presented in sections, each validated by user
 - [ ] Expert review completed, findings discussed collaboratively
-- [ ] Design document written and committed
-- [ ] User offered implementation plan creation
+- [ ] Design document written and committed to main
+- [ ] Full arc presented (ideate → worktree → detail → review → implement)
+- [ ] User chose next step (worktree setup, direct to detail, or done)
 </success_criteria>

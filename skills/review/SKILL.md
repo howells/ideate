@@ -156,9 +156,25 @@ If plan came from a file:
 - [Any unresolved items]
 ```
 
-**Offer next steps:**
-- "Ready to create an implementation plan?" → /arc:detail
-- "Want to start implementing?" → /arc:implement
+**Show remaining arc (if reviewing implementation plan):**
+```
+/arc:ideate     → Design doc (on main) ✓
+     ↓
+/arc:detail     → Implementation plan ✓
+     ↓
+/arc:review     → Review implementation plan ✓ YOU ARE HERE
+     ↓
+/arc:implement  → Execute task-by-task
+```
+
+**Offer next steps based on what was reviewed:**
+
+If reviewed a **design doc**:
+- "Ready to create an implementation plan?" → `/arc:detail`
+- "Done for now" → end
+
+If reviewed an **implementation plan**:
+- "Ready to implement?" → `/arc:implement`
 - "Done for now" → end
 
 </process>
@@ -172,5 +188,6 @@ Review is complete when:
 - [ ] User made decisions on each finding
 - [ ] Plan updated (if from file)
 - [ ] Summary presented
-- [ ] User offered next steps
+- [ ] Remaining arc shown (based on plan type)
+- [ ] User chose next step (detail/implement or done)
 </success_criteria>

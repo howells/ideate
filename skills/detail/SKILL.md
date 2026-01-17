@@ -227,7 +227,7 @@ Write all tasks following the template from Step 3.
 
 **Save to:** `docs/plans/YYYY-MM-DD-<topic>-implementation.md`
 
-## Step 7: Commit and Offer Execution
+## Step 7: Commit and Offer Next Steps
 
 ```bash
 git add docs/plans/
@@ -239,26 +239,43 @@ git commit -m "docs: add <topic> implementation plan"
 git branch --show-current
 ```
 
-**If on main/master and plan involves multiple files:**
+**Show the remaining arc:**
 ```
-"Implementation plan ready. Before executing, I recommend setting up a worktree to keep main clean."
+/arc:ideate     → Design doc (on main) ✓
+     ↓
+[Worktree]      → Feature branch ✓ (if set up)
+     ↓
+/arc:detail     → Implementation plan ✓ YOU ARE HERE
+     ↓
+/arc:review     → Review implementation plan (optional)
+     ↓
+/arc:implement  → Execute task-by-task
+```
+
+**If on main/master:**
+```
+"Implementation plan ready, but you're still on main.
+
+I recommend setting up a worktree before implementing — this keeps main clean
+and lets you easily abandon the work if needed.
+
+Note: The implementation plan will need to be moved to the worktree."
 ```
 
 Options:
-1. **Set up worktree and execute** (Recommended) → Follow `${CLAUDE_PLUGIN_ROOT}/disciplines/using-git-worktrees.md`, then route to `/arc:implement`
-2. **Execute on current branch** → Route to `/arc:implement` directly
-3. **Review plan first** → Open for user review, then decide
-4. **Done for now** → End session
+1. **Set up worktree first** → Follow `${CLAUDE_PLUGIN_ROOT}/disciplines/using-git-worktrees.md`, move plan, then continue
+2. **Continue on main anyway** → Not recommended for multi-file changes
+3. **Done for now** → End session
 
-**If already on feature branch:**
+**If already on feature branch (recommended path):**
 ```
 "Implementation plan ready. How would you like to proceed?"
 ```
 
 Options:
-1. **Execute now** → Route to `/arc:implement`
-2. **Review plan first** → Open for user review
-3. **Done for now** → End session
+1. **Review plan** (`/arc:review`) — Expert reviewers validate before execution
+2. **Execute now** (`/arc:implement`) — Skip review, start implementing
+3. **Done for now** — End session
 </process>
 
 <success_criteria>
@@ -270,6 +287,7 @@ Implementation plan is complete when:
 - [ ] Each task has test code + implementation code
 - [ ] Each task has exact test commands
 - [ ] ASCII UI references included for UI tasks
-- [ ] Plan committed to git
-- [ ] User offered execution options
+- [ ] Plan committed to git (in worktree if set up)
+- [ ] Remaining arc shown (review → implement)
+- [ ] User chose next step (review, implement, or done)
 </success_criteria>
