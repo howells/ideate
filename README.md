@@ -52,13 +52,13 @@ TOOLS   /arc:commit     - Smart commit + push with auto-splitting
 /plugin install arc@howells-arc
 ```
 
-**Recommended:** Enable auto-complete for Arc commands:
+**Recommended:** Enable auto-update to stay current:
 
 ```
-/plugin auto-complete arc@howells-arc
+/plugin auto-update arc@howells-arc
 ```
 
-This lets you type `/arc:` and see all available commands with descriptions.
+This keeps Arc updated automatically when new versions are released.
 
 ## Dependencies
 
