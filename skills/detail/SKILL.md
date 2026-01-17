@@ -1,6 +1,12 @@
 ---
 name: detail
-description: Create a detailed implementation plan with exact file paths, test code, and TDD cycles. Turns a design into executable tasks.
+description: |
+  Create a detailed implementation plan with exact file paths, test code, and TDD cycles.
+  Use when asked to "create an implementation plan", "break this down into tasks",
+  "detail the steps", or after /arc:ideate to turn a design into executable tasks.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <required_reading>

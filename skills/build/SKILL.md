@@ -1,6 +1,12 @@
 ---
 name: build
-description: Quick build for small-to-medium scope work without formal planning. Still uses TDD and verification disciplines.
+description: |
+  Quick build for small-to-medium scope work without formal planning. Still uses TDD and verification.
+  Use when asked to "build this", "add a quick feature", "make this change", or for straightforward
+  implementation tasks that don't need extensive design work.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <rules_context>

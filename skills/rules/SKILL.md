@@ -1,6 +1,12 @@
 ---
 name: rules
-description: Apply Arc's coding rules to the current project. Copies rules to .ruler/ for use by AI agents. Optionally runs ruler to distribute to other agents.
+description: |
+  Apply Arc's coding rules to the current project. Copies rules to .ruler/ directory.
+  Use when asked to "set up coding rules", "apply standards", "configure rules",
+  or when starting a project that should follow Arc's conventions.
+license: MIT
+metadata:
+  author: howells
 ---
 
 ```

@@ -1,6 +1,12 @@
 ---
 name: letsgo
-description: Production readiness checklist. Covers domains, Vercel config, SEO, meta, security, and everything needed to ship.
+description: |
+  Production readiness checklist covering domains, SEO, security, and deployment.
+  Use when asked to "ship it", "deploy to production", "go live", "launch",
+  or when preparing a project for production deployment.
+license: MIT
+metadata:
+  author: howells
 ---
 
 # Letsgo Workflow

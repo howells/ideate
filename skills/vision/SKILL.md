@@ -1,6 +1,12 @@
 ---
 name: vision
-description: Create or review a high-level vision document (500-700 words) that captures project goals and purpose.
+description: |
+  Create or review a high-level vision document capturing project goals and purpose.
+  Use when asked to "define the vision", "what is this project", "set goals",
+  or when starting a new project that needs clarity on purpose and direction.
+license: MIT
+metadata:
+  author: howells
 ---
 
 # Vision Workflow

@@ -1,6 +1,12 @@
 ---
 name: test
-description: Test strategy and execution. Create test plans, run test suites, or fix failing tests. Supports vitest, playwright, jest, and cypress.
+description: |
+  Test strategy and execution. Create test plans, run test suites, or fix failing tests.
+  Use when asked to "run tests", "create test strategy", "fix failing tests", "check coverage",
+  or when you need to verify code works. Supports vitest, playwright, jest, and cypress.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <rules_context>

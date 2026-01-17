@@ -1,6 +1,13 @@
 ---
 name: deslop
-description: Remove LLM-generated artifacts from code. Cleans unnecessary comments, defensive checks, type escapes, and style inconsistencies.
+description: |
+  Remove LLM-generated artifacts from code. Cleans unnecessary comments and defensive checks.
+  Use when asked to "clean up the code", "remove AI slop", "deslop this", or after
+  AI-assisted coding sessions to remove artifacts that don't match codebase style.
+license: MIT
+metadata:
+  author: howells
+  argument-hint: <codebase|branch>
 ---
 
 # Deslop Workflow

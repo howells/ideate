@@ -1,6 +1,13 @@
 ---
 name: figma
-description: Implement UI directly from Figma designs using the Figma MCP. Extracts specs and builds with pixel-perfect fidelity.
+description: |
+  Implement UI directly from Figma designs using the Figma MCP with pixel-perfect fidelity.
+  Use when given a Figma URL, asked to "implement from Figma", "match the design",
+  or when building UI that needs to precisely match design specs.
+license: MIT
+metadata:
+  author: howells
+  argument-hint: <figma-url-or-description>
 ---
 
 # Figma Implementation Workflow

@@ -1,6 +1,12 @@
 ---
 name: suggest
-description: Opinionated recommendations for what to work on next. Analyzes tasklist, codebase, and vision to suggest priorities.
+description: |
+  Opinionated recommendations for what to work on next based on tasklist and codebase.
+  Use when asked "what should I work on", "what's next", "suggest priorities",
+  or when starting a session and unsure where to begin.
+license: MIT
+metadata:
+  author: howells
 ---
 
 # Suggest Workflow

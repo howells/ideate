@@ -1,6 +1,12 @@
 ---
 name: document
-description: Capture solved problems as searchable documentation. Builds institutional knowledge that informs future design sessions.
+description: |
+  Capture solved problems as searchable documentation for future reference.
+  Use when a problem is solved, after saying "that worked", "it's fixed", or when
+  you want to document a solution so it can inform future sessions.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <required_reading>

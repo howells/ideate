@@ -1,6 +1,13 @@
 ---
 name: tasklist
-description: Persistent task backlog that survives across sessions. Git-committed, always available.
+description: |
+  Persistent task backlog that survives across sessions. Git-committed, always available.
+  Use when asked to "add a task", "show my tasks", "update the backlog", "prioritize",
+  or when managing what needs to be done across sessions.
+license: MIT
+metadata:
+  author: howells
+  argument-hint: <add|review|done> <task>
 ---
 
 # Tasklist Workflow

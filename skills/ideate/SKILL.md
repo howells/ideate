@@ -1,6 +1,12 @@
 ---
 name: ideate
-description: Turn ideas into validated designs through collaborative dialogue with built-in expert review. Use when you have a concept and want a clear technical approach before implementation.
+description: |
+  Turn ideas into validated designs through collaborative dialogue with built-in expert review.
+  Use when asked to "design a feature", "plan an approach", "think through implementation",
+  or when starting new work that needs architectural thinking before coding.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <required_reading>

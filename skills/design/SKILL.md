@@ -1,6 +1,12 @@
 ---
 name: design
-description: Create distinctive, non-generic UI designs. Establishes aesthetic direction, creates ASCII wireframes, and avoids AI slop patterns.
+description: |
+  Create distinctive, non-generic UI designs with aesthetic direction and ASCII wireframes.
+  Use when asked to "design the UI", "create a layout", "wireframe this", or when building
+  UI that should be memorable rather than generic. Avoids AI slop patterns.
+license: MIT
+metadata:
+  author: howells
 ---
 
 # Design Workflow

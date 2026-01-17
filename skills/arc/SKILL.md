@@ -1,6 +1,12 @@
 ---
 name: arc
-description: The main entry point. Understands your codebase, asks what you want to do, and routes to the right workflow. Use this when starting work or unsure which command to use.
+description: |
+  The main entry point. Understands your codebase and routes to the right workflow.
+  Use when starting a session, saying "let's work on something", or unsure which
+  Arc command to use. Gathers context and asks what you want to do.
+license: MIT
+metadata:
+  author: howells
 ---
 
 # /arc

@@ -1,6 +1,13 @@
 ---
 name: progress
-description: View and manage the progress journal. Provides knowledge persistence across sessions without spawning multiple agents.
+description: |
+  View and manage the progress journal for knowledge persistence across sessions.
+  Use when asked to "show progress", "what have we done", "add a note",
+  or when you need context from previous sessions.
+license: MIT
+metadata:
+  author: howells
+  argument-hint: <note-to-add>
 ---
 
 # /arc:progress

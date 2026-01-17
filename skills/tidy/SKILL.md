@@ -1,6 +1,12 @@
 ---
 name: tidy
-description: Clean up completed plans in docs/plans/. Analyzes implementation status and offers to archive or delete finished plans.
+description: |
+  Clean up completed plans in docs/plans/. Archives or deletes finished plans.
+  Use when asked to "clean up plans", "tidy the docs", "archive old plans",
+  or after completing implementation to remove stale planning documents.
+license: MIT
+metadata:
+  author: howells
 ---
 
 # Tidy Workflow

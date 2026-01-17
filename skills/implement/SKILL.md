@@ -1,6 +1,12 @@
 ---
 name: implement
-description: Execute an implementation plan task-by-task with TDD. Reads plan from docs/plans/, creates todos, and builds in batches with continuous quality checks.
+description: |
+  Execute an implementation plan task-by-task with TDD and continuous quality checks.
+  Use when asked to "implement the plan", "execute the tasks", "start building from the plan",
+  or after /arc:detail has created an implementation plan ready for execution.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <required_reading>

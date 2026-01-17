@@ -1,6 +1,12 @@
 ---
 name: review
-description: Run expert review on a plan. Spawns parallel reviewer agents and presents findings as Socratic questions for collaborative refinement.
+description: |
+  Run expert review on a plan with parallel reviewer agents. Presents findings as Socratic questions.
+  Use when asked to "review the plan", "get feedback on the design", "check this approach",
+  or before implementation to validate architectural decisions.
+license: MIT
+metadata:
+  author: howells
 ---
 
 <required_reading>

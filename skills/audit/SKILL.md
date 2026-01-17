@@ -1,6 +1,13 @@
 ---
 name: audit
-description: Comprehensive codebase audit. Spawns specialized reviewers in parallel against a scoped portion of the codebase, consolidates findings, and generates an actionable report.
+description: |
+  Comprehensive codebase audit with parallel specialized reviewers. Generates actionable reports.
+  Use when asked to "audit the codebase", "review code quality", "check for issues",
+  "security review", or "performance audit". Accepts path scope like "apps/web".
+license: MIT
+metadata:
+  author: howells
+  argument-hint: <path-or-focus>
 ---
 
 <required_reading>

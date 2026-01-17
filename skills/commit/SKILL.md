@@ -1,6 +1,13 @@
 ---
 name: commit
-description: Smart commit and push with auto-splitting. Intelligently groups changes into separate commits when spanning multiple domains.
+description: |
+  Smart commit and push with auto-splitting across domains. Creates atomic commits.
+  Use when asked to "commit", "push changes", "save my work", or after completing
+  implementation work. Automatically groups changes into logical commits.
+license: MIT
+metadata:
+  author: howells
+  argument-hint: <optional-message>
 ---
 
 # Commit Changes
